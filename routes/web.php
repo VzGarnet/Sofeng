@@ -13,14 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('home-page');
+    return view('dashboard');
 });
 
-Route::get('/cekorder', function () {
-    return view('cekorder');
-});
+// Route::get('/cekorder', function () {
+//     return view('cekorder');
+// });
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
