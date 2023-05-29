@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Form container */
+
+#container{
+    position: absolute;
+    width: 495px;
+    left: 560px;
+    top: 150px;
+
+    border-style: outset;
+    border-radius: 48px;
+
+    background-color: white;
+
+    filter: drop-shadow(2px 4px 10px rgba(244, 47, 96, 0.5));
+
+    padding-top: 59px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+}
+
+/* Form header */
+
+#form-header{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 39px;
+
+    padding-bottom: 25px;
+
+    background: radial-gradient(118.5% 779.09% at 0% 48.72%, #6E001B 1%, #FF0040 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Focused Inputs */
+input[type="email"]{border: 1px solid black;}
+input[type="email"]:focus {border: 3px solid black;outline: none;}
+
+input[type="password"]{border: 1px solid black;}
+input[type="password"]:focus {border: 3px solid black;outline: none;}
+
+/* Form field titles */
+
+.email-pass{
+    left: -20px;
+    
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+}
+
+.forgot-pass{
+    text-align: right;
+}
+
+.register-acc, .submit-btn{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.register-acc, .forgot-pass, .submit-btn{
+    font-family: 'Inter';
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Login button */
+
+#login{
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    background: radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+    border-radius: 28px;
+    color: white;
+
+    border: 0px;
+    width: 150px;
+}
+
+#login:hover{text-shadow: 1px 1px 10px white; box-shadow: 1px 1px 10px red;}
+
+/* Links */
+
+.forgot-pass, #regis{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a#forgot-pass:link{color: black;}
+a#forgot-pass:visited{color: black;}
+a#forgot-pass:hover{color: black; text-shadow: 1px 1px 10px rgb(45, 41, 33);}
+a#forgot-pass:active{color: black;}
+
+a#regis:link{color: #FF0040;}
+a#regis:visited{color: #FF0040;}
+a#regis:hover{color: #FF0040; text-shadow: 1px 1px 10px red;}
+a#regis:active{color: #FF0040;}
+
+/* Confirm new pass button */
+
+#confirm{
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    background: radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+    border-radius: 28px;
+    color: white;
+
+    border: 0px;
+    width: 150px;
+}
+
+#confirm:hover{text-shadow: 1px 1px 10px white; box-shadow: 1px 1px 10px red;}

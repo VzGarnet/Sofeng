@@ -7,11 +7,18 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Additional CSS -->
+  <link rel="stylesheet" href="{{asset('/css/login.css')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>dashboard</title>
+    <title>Forgot Password</title>
   </head>
   <body>
+    <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a href="/welcome">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
@@ -58,6 +65,26 @@
   </div>
 </nav>
 
+<!-- Form -->
+<form class="login-form" id="container">
+  <div class="form-group">
+    <h2 id="form-header">Change Password</h2>
+    <label class="email-pass" for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter registered email">
+  </div>
+  <div class="form-group">
+    <label class="email-pass" for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter new password">
+  </div>
+  <div class="form-group">
+    <label class="email-pass" for="exampleInputPassword1">Confirm password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm new password">
+  </div>
+  <div class="submit-btn">
+    <button type="submit" class="btn btn-primary" id="confirm" onclick="'/'">CONFIRM</button>
+  </div>
+</form>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -67,7 +94,7 @@
 
 
 
-  <footer class="text-center text-white">
+  <footer class="text-center text-white" style="top: 750px; position: relative;">
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->

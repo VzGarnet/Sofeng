@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/', function () {
+    return view('login');
 });
 
 Route::get('/register', function () {
@@ -36,3 +36,15 @@ Route::get('/welcome', function () {
 // Route::get('/about', function () {
 //     return view('about');
 // });
+
+Route::get('/login', function() {
+    return view('login');
+});
+
+Route::get('/forgot-pass', function() {
+    return view('forgot-pass');
+});
+
+Route::get('/register', function() {
+    return view('register');
+});
