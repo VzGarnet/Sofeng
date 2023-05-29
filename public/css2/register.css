@@ -4,7 +4,7 @@
     justify-content: center;
 } */
 
-.container{
+.kontener{
     position: absolute;
     width: 495px;
     left: 560px;
@@ -24,7 +24,7 @@
 
     /* font-size: 14px; */
 }
-.container .form-title {
+.kontener .form-title {
     text-align: center;
     font-size: 40px;
     font-weight: 700;
@@ -39,20 +39,20 @@
     text-fill-color: transparent;
 }
 
-.container .form-group-list {
+.kontener .form-group-list {
     font-family: 'Inter';
     font-weight: bold;
     /* font-size: 18px; */
 }
 
-.container .form-control {
+.kontener .form-control {
     font-weight: 400px;
     /* font-size: 12px; */
     line-height: 15px;
     color: #AEAEAE;
 }
 
-.container .form-check-label {
+.kontener .form-check-label {
     font-family: 'Inter';
 }
 
@@ -93,7 +93,7 @@ input[type="password"]:focus {border: 3px solid black;outline: none;}
 
 #button1:hover{text-shadow: 1px 1px 10px white; box-shadow: 1px 1px 10px red;}
 
-.container #formFooter {
+.kontener #formFooter {
     text-align: center;
 }
 
