@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+/* form {
+    justify-content: center;
+} */
+
+.container{
+    position: absolute;
+    width: 495px;
+    left: 560px;
+    top: 150px;
+
+    border-style: outset;
+    border-radius: 48px;
+
+    background-color: white;
+    filter: drop-shadow(2px 4px 10px rgba(244, 47, 96, 0.5));
+
+
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 60px;
+
+    /* font-size: 14px; */
+}
+.container .form-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 39px;
+
+    padding-bottom: 25px;
+
+    /* background: radial-gradient(131.15% 1283.37% at -7.79% 37.18%, #800020 0%, #FF0040 100%); */
+    background: radial-gradient(118.5% 779.09% at 0% 48.72%, #6E001B 1%, #FF0040 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+}
+
+.container .form-group-list {
+    font-family: 'Inter';
+    font-weight: bold;
+    /* font-size: 18px; */
+}
+
+.container .form-control {
+    font-weight: 400px;
+    /* font-size: 12px; */
+    line-height: 15px;
+    color: #AEAEAE;
+}
+
+.container .form-check-label {
+    font-family: 'Inter';
+}
+
+/* #exampleInputPassword1, #exampleInputEmail1{
+    font-size: 12px;
+} */
+
+/* Focused Inputs */
+input[type="email"]{border: 1px solid black;}
+input[type="email"]:focus {border: 3px solid black;outline: none;}
+
+input[type="password"]{border: 1px solid black;}
+input[type="password"]:focus {border: 3px solid black;outline: none;}
+
+.for-button{
+    text-align: center;
+}
+
+#button1{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* text-align: center; */
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    width: 150px;
+    height: 40px;
+    background: radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+    border-radius: 28px;
+    color: white;
+    border: none;
+}
+
+#button1:hover{text-shadow: 1px 1px 10px white; box-shadow: 1px 1px 10px red;}
+
+.container #formFooter {
+    text-align: center;
+}
+
+#underlineHover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a#underlineHover:link{color: #FF0040;}
+a#underlineHover:visited{color: #FF0040;}
+a#underlineHover:hover{color: #FF0040; text-shadow: 1px 1px 10px red;}
+a#underlineHover:active{color: #FF0040;}
+
+/* 6e001b */
+
+/* @media screen and (min-device-width: 768px)
+    and (max-device-width: 1024px) {
+    .gfg-div {
+    }
+} */
