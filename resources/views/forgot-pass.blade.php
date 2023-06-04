@@ -40,9 +40,9 @@
           Booking
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Booking Ticket</a>
+          <a class="dropdown-item" href="/search">Booking Ticket</a>
           <a class="dropdown-item" href="#">Check Order</a>
-          <a class="dropdown-item" href="#">Hsitory</a>
+          <a class="dropdown-item" href="#">History</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -56,7 +56,7 @@
 
     </ul>
     <li class="Login">
-        <a class="login" href="#">Login/Sign Up</a>
+        <a class="login" href="/login">Login/Sign Up</a>
       </li>
     <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -81,6 +81,7 @@
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm new password">
   </div>
   <div class="submit-btn">
+      <!-- <a href="/login" class="btn">PLAY NOW</a> -->
     <button type="submit" class="btn btn-primary" id="confirm" onclick="'/'">CONFIRM</button>
   </div>
 </form>

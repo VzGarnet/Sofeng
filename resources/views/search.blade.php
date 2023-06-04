@@ -7,18 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- Additional CSS -->
-  <link rel="stylesheet" href="{{asset('/css/login.css')}}">
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Login</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/search.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>dashboard</title>
+    
   </head>
   <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a href="/welcome">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
@@ -56,7 +51,7 @@
 
     </ul>
     <li class="Login">
-        <a class="login" href="login">Login/Sign Up</a>
+        <a class="login" href="/login">Login/Sign Up</a>
       </li>
     <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -65,39 +60,101 @@
   </div>
 </nav>
 
-<!-- Login Form -->
-<div id="container">
-  <h2 id="form-header">LOGIN</h2>
-<form class="login-form">
-  <div class="form-group">
-    <label class="email-pass" for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter registered email">
-    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  </div>
-  <div class="form-group">
-    <label class="email-pass" for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter registered password">
-  </div>
-  <div class="forgot-pass">
-    <a id="forgot-pass" href="/forgot-pass">Forgot password?</a>
-  </div>
-  <div class="submit-btn">
-    <button type="submit" class="btn btn-primary" id="login">LOGIN</button>
-  </div>
-  <div class="register-acc">
-    New to Travail? <a id="regis" href="/register">Sign Up Now</a>
-  </div>
-</form>
-</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+   <div class="search">
+        
+        <div class="search-ticket">
+            <h3>Pesan Tiket Kereta</h3>
+            <i class='fas fa-train fa-2x'></i>
+        </div>
+        
+        <div class="destination">
+            <div class="departure">
+                <h5>Stasiun Awal</h5>
+                <select class="departure-select">
+                    <option>Asal</option>
+                </select>
+            </div>
 
-<footer class="text-center text-white" style="top: 650px; position: relative;">
+            <div class="vice-versa">
+                <img src="{{url('/images/vice versa.png')}}" alt="Image"/>
+            </div>
+
+            <div class="arrival">
+                <h5>Stasiun Tujuan</h5>
+                <select class="arrival-select">
+                    <option>Tujuan</option>
+                </select>
+            </div>
+        </div>
+
+     <br>
+
+        <div class="detail">
+            <div class="departure-date">
+              <h5>Tanggal Pergi</h5>
+              <div class="date-picker" id="datepicker">
+                <input type="text" class="form-control" id="date"/>
+                <span class="input-group-append">
+                <span class="input-group-text bg-light d-block">
+                <i class="fa fa-calendar"></i>
+                </span>
+                </span>
+              </div>
+            </div>
+
+            <div class="arrival-date">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                <h5>Tanggal Pulang</h5>
+                </label>
+              </div>
+              <div class="date-picker" id="datepicker">
+                <input type="text" class="form-control" id="date"/>
+                <span class="input-group-append">
+                <span class="input-group-text bg-light d-block">
+                <i class="fa fa-calendar"></i>
+                </span>
+                </span>
+              </div>
+            </div>
+
+            <div class="passenger">
+              <h5>Penumpang</h5>
+              <div class="quantity">
+                <div class="adult">
+                  <input type="number" id="adultTicket" name="adultTicket" min="0" max="5" value="0">
+                  <label for="adultTicket">Dewasa</label>
+                </div>
+
+                <div class="child">
+                  <input type="number" id="childTicket" name="childTicket" min="0" max="2" value="0">
+                  <label for="childTicket">Anak</label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="btn-search">Cari Tiket</button>
+
+
+        </div>
+
+
+  
+
+
+
+    </div>
+   
+
+
+ <br>
+ <br>
+ <br>
+ <br>
+
+  <footer class="text-center text-white">
   <!-- Grid container -->
   <div class="container pt-4">
     <!-- Section: Social media -->
@@ -167,4 +224,19 @@
   <!-- Copyright -->
 </footer>
 
-</html>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+    
+ 
+
+
+
+
+  </html>

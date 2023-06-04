@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>dashboard</title>
+    <title>Travail</title>
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,9 +33,9 @@
           Booking
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Booking Ticket</a>
+          <a class="dropdown-item" href="/search">Booking Ticket</a>
           <a class="dropdown-item" href="#">Check Order</a>
-          <a class="dropdown-item" href="#">Hsitory</a>
+          <a class="dropdown-item" href="#">History</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -49,7 +49,7 @@
 
     </ul>
     <li class="Login">
-        <a class="login" href="#">Login/Sign Up</a>
+        <a class="login" href="/login">Login/Sign Up</a>
       </li>
     <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

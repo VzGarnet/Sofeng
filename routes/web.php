@@ -52,3 +52,8 @@ Route::get('/forgot-pass', function() {
 Route::get('/register', function() {
     return view('register');
 });
+
+Route::get('/search', function() {
+    return view('search');
+});
+
