@@ -94,10 +94,8 @@
             <div class="departure-date">
               <h5>Tanggal Pergi</h5>
               <div class="date-picker" id="datepicker">
-                <input type="text" class="form-control" id="date"/>
+                <input type="date" class="form-control" id="departure-date"/>
                 <span class="input-group-append">
-                <span class="input-group-text bg-light d-block">
-                <i class="fa fa-calendar"></i>
                 </span>
                 </span>
               </div>
@@ -111,10 +109,8 @@
                 </label>
               </div>
               <div class="date-picker" id="datepicker">
-                <input type="text" class="form-control" id="date"/>
+                <input type="date" class="form-control" id="date"/>
                 <span class="input-group-append">
-                <span class="input-group-text bg-light d-block">
-                <i class="fa fa-calendar"></i>
                 </span>
                 </span>
               </div>

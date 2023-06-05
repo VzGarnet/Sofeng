@@ -1,9 +1,7 @@
 .search{
     border: solid black;
     border-radius: 10px;
-    width: 70vw;
-    justify-content: center;
-    align-items: center;
+    width: 70%;
     margin-left: 15vw;
     margin-top: 5vh;
     
@@ -43,7 +41,8 @@
 }
 
 .vice-versa img{
-    width: 30px;
+    width: 2vw;
+    height: fit-content;
     cursor: pointer;
 
 }
@@ -56,14 +55,17 @@
 
 .detail{
     display: flex;
-    margin-left: 3vw;
+    margin-left: 1vw;
     margin-bottom: 2vh;
+    justify-content: space-around;
 }
 
 .date-picker{
     display: flex;
-    width: 100%;
+    width: 10vw;
 }
+
+
 
 .arrival-date{
     margin-left: 3%;
