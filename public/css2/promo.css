@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+.infopromo{
+    position: relative;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+    padding-top: 5vw;
+}

@@ -39,8 +39,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="/cekorder1">Check Order</a>
-          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="/cekorder">Check Order</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -92,7 +91,7 @@
             </div>
 
             <div class="for-button">
-                <button id="button1">SIGN UP</button>
+                <button id="button1"><a href="/login" style="color: white; text-decoration: none">SIGN UP</a></button>
             </div>
             
             <!-- <button type="signup" class="btn btn-primary">Sign up</button> -->

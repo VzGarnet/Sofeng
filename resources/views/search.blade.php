@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Bebas</a>
@@ -36,8 +36,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="/cekorder1">Check Order</a>
-          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="/cekorder">Check Order</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -46,7 +45,7 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="/about">About Us</a>
    
 
     </ul>
@@ -131,7 +130,7 @@
               </div>
             </div>
 
-            <button type="submit" id="btn-search">Cari Tiket</button>
+            <button type="submit" id="btn-search"><a href="/schedule" style="color: white; text-decoration: none">CARI TIKET</a></button>
 
 
         </div>

@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
         </li>
         <!-- <li class="nav-item">
             <a class="nav-link" href="#">Bebas</a>
@@ -39,8 +39,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/search">Booking Ticket</a>
-            <a class="dropdown-item" href="/cekorder1">Check Order</a>
-            <a class="dropdown-item" href="#">History</a>
+            <a class="dropdown-item" href="/cekorder">Check Order</a>
             <!-- <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a> -->
             </div>
@@ -73,8 +72,8 @@
     <div class="wrappers">
         <div class="choose1">
             <ul>
-                <li><a href="/cekorder1" id="hari">90 Hari Terakhir</a></li>
-                <li><a href="#" id="januari">Januari 2023</a></li>
+                <li><a href="/cekorder" id="hari">90 Hari Terakhir</a></li>
+                <li><a href="/cekorder1" id="januari">Januari 2023</a></li>
                 <li><a href="#" id="filter"><i class="fa fa-filter" aria-hidden="true"></i> Filter</a></li>
             </ul>
         </div>

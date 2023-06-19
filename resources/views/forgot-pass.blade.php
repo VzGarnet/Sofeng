@@ -41,8 +41,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="/cekorder1">Check Order</a>
-          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="/cekorder">Check Order</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -82,7 +81,7 @@
   </div>
   <div class="submit-btn">
     <a href='/welcome'> 
-      <button type="submit" class="btn btn-primary" id="confirm">CONFIRM</button>
+      <button type="submit" class="btn btn-primary" id="confirm"><a href="/login" style="color: white; text-decoration: none">CONFIRM</a></button>
     </a>
   </div>
 </form>

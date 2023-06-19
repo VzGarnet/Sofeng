@@ -41,8 +41,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="/cekorder1">Check Order</a>
-          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="/cekorder">Check Order</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -82,8 +81,8 @@
     <a id="forgot-pass" href="/forgot-pass">Forgot password?</a>
   </div>
   <div class="submit-btn">
-    <a href="/home-page">
-    <button type="submit" class="btn btn-primary" id="login">LOGIN</button>
+    <a href="/home" target="_blank">
+    <button type="submit" class="btn btn-primary" id="login"><a href="/home" style="color: white; text-decoration: none">LOGIN</a></button>
     </a>
   </div>
   <div class="register-acc">

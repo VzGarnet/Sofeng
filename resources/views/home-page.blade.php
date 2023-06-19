@@ -28,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Bebas</a>
@@ -39,8 +39,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="/cekorder1">Check Order</a>
-          <a class="dropdown-item" href="#">History</a>
+          <a class="dropdown-item" href="/cekorder">Check Order</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -71,16 +70,25 @@
 
     <div id="container-header">
       <div class="promo" id="promo1">
-        <img class="promo-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
-        <div class="promo-text">Promo baru!</div>
+        <a href="/promo">
+          <img class="promo-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
+          <div class="promo-text">Promo baru!</div>
+        </a>
+        
       </div>
       <div class="promo" id="promo2">
-        <img class="promo-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
-        <div class="promo-text">Gerbong baru KAI</div>
+        <a href="/gerbong">
+          <img class="promo-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
+          <div class="promo-text">Gerbong baru KAI</div>
+        </a>
+
       </div>
       <div class="promo" id="promo3">
-        <img class="promo-img" src="{{url('/images/train3.jpg')}}" alt="images"/>
-        <div class="promo-text">Ayo naik kereta!</div>
+        <a href="/search">
+          <img class="promo-img" src="{{url('/images/train3.jpg')}}" alt="images"/>
+          <div class="promo-text">Ayo naik kereta!</div>
+        </a>
+        
       </div>
   </div>
 
@@ -175,7 +183,7 @@
     <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
     eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud 
     exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
-    <a href="/#" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
+    <a href="/search" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
   </div>
   <div class="desc-box" id="desc2">
     <img class="desc-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
@@ -184,7 +192,7 @@
     <div class="desc-text-fill" id="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
     eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud 
     exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
-    <a href="/#" class="btn-container" id="promo-btn2"><div class="promo-btn">Pelajari</div></a>
+    <a href="/promo" class="btn-container" id="promo-btn2"><div class="promo-btn">Pelajari</div></a>
   </div>
   <div class="desc-box" id="desc3">
     <img class="desc-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
@@ -193,7 +201,7 @@
     <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
     eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud 
     exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
-    <a href="/#" class="btn-container" id="promo-btn3"><div class="promo-btn">Pelajari</div></a>
+    <a href="/gerbong" class="btn-container" id="promo-btn3"><div class="promo-btn">Pelajari</div></a>
   </div>
   </body>
 

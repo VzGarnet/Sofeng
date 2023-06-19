@@ -31,7 +31,7 @@ Route::get('/login', function () {
 });
 
 Route::get('/cekorder', function () {
-    return view('cekorder');
+    return view('cekorder1');
 });
 
 Route::get('/welcome', function () {
@@ -58,10 +58,18 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/booking', function() {
-    return view('booking');
+Route::get('/cekorder1', function() {
+    return view('cekorder2');
 });
 
-Route::get('/payment', function() {
-    return view('payment');
+Route::get('/schedule', function() {
+    return view('schedule');
+});
+
+Route::get('/promo', function() {
+    return view('promo');
+});
+
+Route::get('/gerbong', function() {
+    return view('gerbong');
 });
