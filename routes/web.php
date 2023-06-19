@@ -58,3 +58,10 @@ Route::get('/about', function() {
     return view('about');
 });
 
+Route::get('/booking', function() {
+    return view('booking');
+});
+
+Route::get('/payment', function() {
+    return view('payment');
+});

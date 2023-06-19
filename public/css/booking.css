@@ -13,7 +13,8 @@
     border: solid black;
     width: 95%;
     border-radius: 10px;
-    /* padding: 1vw 5vw; */
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
 }
 
 .data-penumpang{
@@ -23,8 +24,6 @@
     width: 100%;
     padding: 0vh 2vw;
     display: flex;
-    
-    
 }
 
 .data-penumpang p{
@@ -53,36 +52,31 @@
 
 .name-control{
     border-radius: 5px;
-    width: 35vw;
-}
-
-.data{
-    
-    margin: 1vh 3vw;
-    display: flex;
-    justify-content: space-between;
+    width: 25vw;
 }
 
 .no-telp{
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    margin: 1vh 3vw;
 }
 
 .phone-control{
     border-radius: 5px;
-    width: 35vw;
+    width: 25vw;
 }
 
 .email{
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    margin: 1vh 3vw;
 }
 
 .email-control{
     border-radius: 5px;
-    width: 35vw;
+    width: 25vw;
 }
 
 .nik{
@@ -99,11 +93,55 @@
     width: 25vw;
 }
 
+.select-seat{
+    background: rgb(128,0,32);
+    background: linear-gradient(90deg, rgba(128,0,32,1) 0%, rgba(255,0,64,1) 100%);
+    border-radius: 8px 8px 0px 0px;
+    width: 100%;
+    padding: 0vh 2vw;
+    display: flex;
+}
+
+.select-seat p{
+   color: white;
+   margin: 1vh 1vh;
+   font-weight: bolder;
+ }
+
+.gerbong{
+    margin: 1vh 3vw;
+}
+
+.gerbong-select{
+    border-radius: 5px;
+    width: 25vw;
+    margin-bottom: 2vh;
+}
+
+.seat{
+    margin: 1vh 3vw;
+}
+
+.seat-selection{
+    width: 25vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-select{
+    border-radius: 5px;
+    width: 12vw;
+}
+
+.column-select{
+    border-radius: 5px;
+    width: 12vw;
+}
+
 .price{
     width: 100%;
     padding-left: 5vw;
     padding-top: 2vw;
-    
 }
 
 .price h5{
@@ -188,27 +226,10 @@
     width: 90%;
 }
 
-.btn-kursi{
-    border-radius: 10px;
-    margin-top: 2vh;
-    margin-left: 1vw;
-    border: none;
-    cursor: pointer;
-    width: 12vw;
-    height: 8vh;
-    color: black;
-    font-weight: bolder;
-    font-size: 1.5vw;
-    border: solid black;
-    background-color: none;
-    
-}
-
 
 .btn-pesan{
     border-radius: 10px;
     margin-top: 2vh;
-    margin-left: 1vw;
     border: none;
     cursor: pointer;
     width: 12vw;

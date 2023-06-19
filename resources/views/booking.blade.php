@@ -27,11 +27,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Bebas</a>
-      </li> -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Booking
@@ -40,13 +37,8 @@
           <a class="dropdown-item" href="/search">Booking Ticket</a>
           <a class="dropdown-item" href="#">Check Order</a>
           <a class="dropdown-item" href="#">History</a>
-          <!-- <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li> -->
       <li class="nav-item">
         <a class="nav-link" href="#">About Us</a>
    
@@ -55,10 +47,6 @@
     <li class="Login">
         <a class="login" href="/login">Login/Sign Up</a>
       </li>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
   </div>
 </nav>
 
@@ -74,6 +62,9 @@
                 <h6>Titel</h6>
                 <select class="titel-select">
                     <option selected>Pilih Titel</option>
+                    <option>Tuan</option>
+                    <option>Nyonya</option>
+                    <option>Nona</option>
                 </select>
             </div>
 
@@ -82,7 +73,6 @@
                 <input type="text" class="name-control" id="formGroupExampleInput" placeholder="Masukkan Nama Lengkap Anda">
             </div>
 
-            <div class="data">
                 <div class="no-telp">
                     <label for="phone">Nomor Telepon</label>
                     <input type="tel" id="phone" class="phone-control" placeholder="Masukkan Nomor Telepon Anda">
@@ -92,18 +82,58 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" class="email-control" placeholder="Masukkan Alamat Email Anda">
                 </div>
-            </div>
 
             <div class="nik">
                 <label for="formGroupExampleInput" class="nik-label">NIK</label>
                 <input type="text" class="nik-control" id="formGroupExampleInput" placeholder="Masukkan NIK Anda">
             </div>
-
-
         </div>
 
+        <div class="detail-penumpang">
+            <div class="select-seat">
+                <p>Pilih Kursi</p> 
+            </div>
 
-    </div>
+            <div class="gerbong">
+                <h6>Pilih Gerbong</h6>
+                <select class="gerbong-select">
+                    <option selected>Pilih Gerbong</option> 
+                    <option>Gerbong 1</option>
+                    <option>Gerbong 2</option>
+                    <option>Gerbong 3</option>
+                    <option>Gerbong 4</option>
+                </select>
+            </div>
+
+            <div class="seat">
+                <h6>Pilih Kursi</h6>
+                <div class="seat-selection">
+                  <select class="row-select">
+                      <option selected>Pilih Baris</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                  </select>
+
+                  <select class="column-select">
+                      <option selected>Pilih Kolom</option>
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                      <option>D</option>
+                  </select>
+                </div>
+
+            </div>
+        </div>
+  </div>
 
     <div class="price">
         <h5>Rincian Harga</h5>
@@ -136,17 +166,9 @@
     </div>
 
     <div class="booking-btn">
-        <a href="">
-            <button type="button" class="btn-kursi" >Pilih Kursi</button>
-        </a>
-        
-        <a href="#">
+        <a href="/payment">
         <button type="button" class="btn-pesan">Pesan Tiket</button>
         </a>
-        
-      
-
-
     </div>
 
 
