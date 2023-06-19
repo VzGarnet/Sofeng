@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+.wrappers{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    /* box-sizing: border-box; */
+}
+
+.wrappers ul li{
+    list-style-type: none;
+    display: inline-block;
+    /* padding-right: 30px; */
+    border: 1px solid #767676;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-items: center;
+}
+
+.wrappers ul li #hari{
+    list-style-type: none;
+    display: inline-block;
+    border: #800020;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.choose1 ul li:hover{
+    list-style-type: none;
+    display: inline-block;
+    /* padding-right: 30px; */
+    border: 1px;
+    border-radius: 30px;
+    cursor: pointer;
+    background:radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+}
+
+.choose1 ul li a{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #767676;
+}
+
+.choose1 ul li a:hover{
+    padding-left: 26px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+    color: white;
+}
+.choose1 ul #hari{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    background:radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+    color: white;
+}
+
+#month{
+    padding-left: 95px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.kontenhistory{
+    margin-left: 95px;
+    margin-right: 95px;
+    /* padding-top: 15px;
+    padding-left: 30px; */
+    line-height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-bottom: 0;
+}
+
+#headcontent{
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
+    background:radial-gradient(100% 1302.5% at 0% 100%, #800020 0%, #FF0040 100%);
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+}
+#headcontenttext{
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+#bodycontent{
+    padding-top: 15px;
+}
+
+#bodycontent1 ul li{
+    list-style-type: none;
+    font-size: 18px;
+}
+
+#bodycontent1 ul li i{
+    padding-right: 10px;
+}
+
+#footcontent{
+    border: 0.5px solid black;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#footcontent1 ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+#footcontent1 ul li{
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+#footcontent1 ul #fc1list1{
+    color: #00DA30;
+}
+
+#footcontent1 ul #fc1list2{
+    background: linear-gradient(90deg, #800020 0%, #FF0040 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+#space{
+    padding-bottom: 30px;
+}

@@ -39,7 +39,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="#">Check Order</a>
+          <a class="dropdown-item" href="/cekorder1">Check Order</a>
           <a class="dropdown-item" href="#">History</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
