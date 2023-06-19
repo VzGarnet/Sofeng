@@ -277,6 +277,7 @@
 
 footer{
     position: absolute;
-    top: 200%;
-    width: 100%;
+    top: 120%;
+    left: -20vw;
+    width: 150%;
 }
