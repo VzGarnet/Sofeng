@@ -1,0 +1,222 @@
+.penumpang{
+    /* border: solid black; */
+    width: 100%;
+    padding-left: 5vw;
+    padding-top: 2vw;
+}
+
+.penumpang h5{
+    font-weight: bolder;
+}
+
+.detail-penumpang{
+    border: solid black;
+    width: 95%;
+    border-radius: 10px;
+    /* padding: 1vw 5vw; */
+}
+
+.data-penumpang{
+    background: rgb(128,0,32);
+    background: linear-gradient(90deg, rgba(128,0,32,1) 0%, rgba(255,0,64,1) 100%);
+    border-radius: 8px 8px 0px 0px;
+    width: 100%;
+    padding: 0vh 2vw;
+    display: flex;
+    
+    
+}
+
+.data-penumpang p{
+   color: white;
+   margin: 1vh 1vh;
+   font-weight: bolder;
+ }
+
+.titel{
+    margin: 1vh 3vw;
+}
+
+.titel-select{
+    border-radius: 5px;
+    width: 25vw;
+}
+
+.name-form{
+    margin: 1vh 3vw;
+}
+
+.name-label{
+    font-weight: bold;
+    display: flex;
+}
+
+.name-control{
+    border-radius: 5px;
+    width: 35vw;
+}
+
+.data{
+    
+    margin: 1vh 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-telp{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.phone-control{
+    border-radius: 5px;
+    width: 35vw;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.email-control{
+    border-radius: 5px;
+    width: 35vw;
+}
+
+.nik{
+    margin: 1vh 3vw;
+}
+
+.nik-label{
+    font-weight: bold;
+    display: flex;
+}
+
+.nik-control{
+    border-radius: 5px;
+    width: 25vw;
+}
+
+.price{
+    width: 100%;
+    padding-left: 5vw;
+    padding-top: 2vw;
+    
+}
+
+.price h5{
+    font-weight: bolder;
+}
+
+.detail-price{
+    border: solid black;
+    width: 95%;
+    border-radius: 10px;
+    /* padding: 1vw 5vw; */
+}
+
+.detail-price p{
+    color: white;
+    margin: 0vh 0vw;
+    font-weight: bolder;
+  }
+ 
+
+#btn-collapse{
+    background: rgb(128,0,32);
+    background: linear-gradient(90deg, rgba(128,0,32,1) 0%, rgba(255,0,64,1) 100%);
+    border-radius: 8px 8px 0px 0px;
+    width: 100%;
+    padding: 1vh 3vw;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.total{
+   /* border: solid black; */
+   display: flex;
+   width: 20%;
+   justify-content: end;
+   align-items: center;
+}
+
+.total p{
+    font-size: larger;
+}
+
+
+.icon{
+    margin-left: 2vw;
+    justify-content: end;
+}
+
+
+
+.icon i::before {
+    content: "\f077";
+}
+
+.collapsed .icon i::before {
+    content: "\f078";
+}
+
+.train-detail{
+    margin: 1vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 6vw;
+}
+
+.more-price{
+    margin: 1vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 6vw;
+    color: #3cff00;
+    
+}
+
+.booking-btn{
+    display: flex;
+    /* border: solid black; */
+    justify-content: center;
+    margin: 1vh 5vw;
+    width: 90%;
+}
+
+.btn-kursi{
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    border: none;
+    cursor: pointer;
+    width: 12vw;
+    height: 8vh;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5vw;
+    border: solid black;
+    background-color: none;
+    
+}
+
+
+.btn-pesan{
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    border: none;
+    cursor: pointer;
+    width: 12vw;
+    height: 8vh;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5vw;
+    background: rgb(128,0,32);
+    background: linear-gradient(90deg, rgba(128,0,32,1) 0%, rgba(255,0,64,1) 100%);
+    
+}
