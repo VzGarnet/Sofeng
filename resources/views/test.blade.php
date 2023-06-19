@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>test</h1>
+
+    <form>
+    <a href="/login">
+    <button type="submit">TEST</button>
+</a>
+</form>
 </body>
 </html>

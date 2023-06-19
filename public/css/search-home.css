@@ -1,0 +1,127 @@
+.search{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 15vw;
+    margin-top: 5vh;
+    
+    position: absolute;
+    top: 290px;
+    left: 10px;
+
+    background-color: white;
+}
+
+.search-ticket{
+    /* border: solid black; */
+    display: flex;
+    margin-left: 2vw;
+}
+
+.search .search-ticket i{
+    /* border: solid black; */
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.destination{
+    /* border: solid black; */
+    display: flex;
+    margin-left: 3vw;
+    
+}
+
+.departure-select{
+    width: 30vw;
+    height: 5vh;
+    /* border: solid black; */
+}
+
+.vice-versa{
+    margin-top: 5vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.vice-versa img{
+    width: 2vw;
+    height: fit-content;
+    cursor: pointer;
+
+}
+
+.arrival-select{
+    width: 30vw;
+    height: 5vh;
+    /* border: solid black; */
+}
+
+.detail{
+    display: flex;
+    margin-left: 1vw;
+    margin-bottom: 2vh;
+    justify-content: space-around;
+}
+
+.date-picker{
+    display: flex;
+    width: 10vw;
+}
+
+
+
+.arrival-date{
+    margin-left: 3%;
+}
+
+.form-check-input{
+    width: 1em; 
+    height: 1em; 
+}
+
+.passenger {
+
+    align-items: center;
+    margin-left: 3%;
+  }
+
+.quantity{
+    display: flex;
+}
+
+.adult{
+    width: 45%;
+    
+}
+.child{
+    width: 45%;
+  
+}
+
+
+#adultTicket{
+    width: 35%;
+    height: 5vh;
+}
+
+#childTicket{
+    width: 35%;
+    height: 5vh;
+}
+
+#btn-search{
+    border-radius: 40px;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    border: none;
+    cursor: pointer;
+    width: 12vw;
+    height: 8vh;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5vw;
+    background: rgb(128,0,32);
+    background: linear-gradient(90deg, rgba(128,0,32,1) 0%, rgba(255,0,64,1) 100%);
+    
+}

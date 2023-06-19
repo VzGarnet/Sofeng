@@ -1,0 +1,282 @@
+.title{
+    position: absolute;
+    top: 60px;
+    left: 70px;
+}
+
+.order-det{
+    border: 2px solid black;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 110px;
+    left: 70px;
+
+    width: 785px;
+    height: 430px;
+}
+
+.small-containers{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 200px;
+    width: 40%;
+
+    line-height: 18px;
+}
+
+.container-head{
+    /* border: 0.5px solid black; */
+    border-radius: 5px;
+    background: radial-gradient(100% 48034.03% at 0% 100%, #800020 0%, #FF0040 100%);
+    width: 100%;
+
+    color: azure;
+    font-weight: 600;
+    font-size: 24px;
+    text-indent: 20px;
+    padding: 20px;
+
+    margin-bottom: 1vh;
+}
+
+#passenger-info{
+    position: absolute;
+    left: 900px;
+    top: 110px;
+    text-indent: 3vh;
+}
+
+#passenger-name{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.datas{
+    /* color: red; */
+    margin-top: -35px;
+    margin-left: 350px;
+}
+
+.hl{
+    border: 0.5px solid black;
+    width: 90%;
+
+    position: relative;
+    left: 20px
+
+}
+
+#payment-info{
+    position: absolute;
+    left: 900px;
+    top: 333px;
+    text-indent: 3vh;
+}
+
+#total-fee{
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 4vh;
+}
+
+#total-text{
+    color: #FF0040;
+    position: relative;
+    top: -1.4vw;
+    right: -23vw;
+
+}
+
+.ticket-det{
+    text-indent: 30px;
+}
+
+.circle{
+    height: 12px;
+    width: 12px;
+    background-color: #FF0040;
+    border-radius: 50%;
+}
+
+.vl{
+    border-left: 3px solid #FF0040;
+    height: 200px;
+
+    position: absolute;
+    top: 192px;
+    left: 55px;
+}
+
+#depart-crc{
+    position: absolute;
+    top: 180px;
+    left: 50px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #FF0040; 
+}
+
+#arrive-crc{
+    position: absolute;
+    top: 380px;
+    left: 50px;
+}
+
+.big-text{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.small-text{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#train-name{
+    position: absolute;
+    top: 90px;
+}
+
+#depart-schedule{
+    position: absolute;
+    top: 160px;
+    left: 50px;
+}
+
+#arrive-schedule{
+    position: absolute;
+    top: 347px;
+    left: 50px;
+}
+
+#depart-stn{
+    position: absolute;
+    top: 160px;
+    left: 280px;
+}
+
+#arrive-stn{
+    position: absolute;
+    top: 347px;
+    left: 280px;
+}
+
+#payment-title{
+    position: absolute;
+    top: 570px;
+}
+
+.payment-box{
+    border: 2px solid black;
+    border-radius: 2%;
+
+    position: absolute;
+    top: 650px;
+    left: 100px;
+
+    height: 718px;
+    width: 1300px;
+}
+
+.left-box{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 337px;
+    height: 718px;
+
+    background: radial-gradient(100% 108.43% at 0% 100%, #800020 23.56%, #FF0040 100%);
+    border-radius: 10px;
+}
+
+.payment-type{
+    width: 100%;
+    height: 60px;
+
+    background: transparent;
+    border: 0px;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.right-box{
+    position: absolute;
+    padding-left: 337px;
+    width: 936px;
+}
+
+.form-title{
+    font-size: 54px;
+    font-weight: bold;
+
+    margin-left: 20px;
+    margin-bottom: 7px;
+}
+
+.subtitle{
+    margin: 5px;
+}
+
+.payment-choice{
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 5px;
+    padding-left: 10px;
+
+    font-size: 26px;
+    font-weight: 700;
+    width: 60vw;
+    height: 12vh;
+}
+
+.payment-logo{
+    position: relative;
+
+    height: 80px;
+    width: 120px;
+    object-fit: contain;
+}
+
+#logo-cba{
+    left: 40vw;
+}
+
+#logo-inb{
+    left: 41vw;
+}
+
+#logo-diriman{
+    left: 38vw;
+}
+
+.tabs{
+    display: inline-block;
+    margin-left: 40px;
+
+    position: absolute;
+    right: -22vw;
+}
+
+.payment-det{
+    border-radius: 1%;
+    margin-top: 5vh;
+
+    height: 100%;
+    width: 160.3%;
+
+    background-color: rgb(196, 196, 196);
+}
+
+#endTotal{
+    margin-top: 8.6vh;
+}
+
+footer{
+    position: absolute;
+    top: 200%;
+    width: 100%;
+}
