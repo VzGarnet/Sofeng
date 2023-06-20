@@ -164,11 +164,40 @@ use Illuminate\Support\Carbon;
   </div>
 
 
-  <form action="{{ route('process-form') }}" method="POST" style="margin:2vw">
+<form action="{{ route('process-form') }}" method="POST" style="margin:2vw">
     @csrf
     <input type="text" name="userInput" placeholder="[0/1] = [DESC/ASC]">
     <button type="submit">Submit</button>
 </form>
+
+@if ($userInput)
+    @php
+        $argos = DB::table('argo')->orderBy('harga')->get();
+    @endphp
+@else
+    @php
+        $argos = DB::table('argo')->orderByDesc('harga')->get();
+    @endphp
+@endif
+
+@foreach ($argos as $argo)
+<div class="train-cont">
+    <div  class="big-text" id="train-name">{{ $argo->argoName }}</div>
+    <div class="small-text" id="train-class">{{ $argo->kelasArgo }}</div>
+    <h3 class="price">Rp {{ number_format($argo->harga,0,",","." ) }},-</h3>
+    <div class="small-text" id="dep-head">Departure:</div>
+    <div  class="big-text" id="dep-time">{{ $formatedDepart }}</div>
+    <div class="small-text" id="dep-station">{{ $argo->stasiunAwal }} ({{ $argo->tujuanAwal }})</div>
+    <div class="small-text" id="arr-head">Arrival:</div>
+    <div  class="big-text" id="arr-time">{{ $formatedArrive }}</div>
+    <div class="small-text" id="arr-station">{{ $argo->stasiunAkhir }} ({{ $argo->tujuanAkhir }})</div>
+    <div class="small-text" id="est-head">Estimate:</div>
+    <div  class="big-text" id="est-time">{{ $diffHour }} hour(s) {{ $diffMin }} minute(s)</div>
+    <div class="small-text" id="est-type">Transit</div>
+  </div>
+@endforeach
+
+
 
  <br>
  <br>

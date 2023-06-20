@@ -49,12 +49,25 @@
       </li> -->
       <li class="nav-item">
         <a class="nav-link" href="/about">About Us</a>
-   
+
 
     </ul>
-    <li class="Login">
-        <a class="login" href="/login">Login/Sign Up</a>
-      </li>
+
+    @php
+        $rec = DB::table('userLog')->get();
+    @endphp
+    @if ($rec->isEmpty())
+        <li class="Login">
+            <a class="login" href="/login">Login/Sign Up</a>
+        </li>
+    @else
+        @php
+            $rec = DB::table('userLog')->first();
+        @endphp
+        <li class="Login">
+            <a class="login" href="/login">{{$rec->username}}</a>
+        </li>
+    @endif
     <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -74,7 +87,7 @@
           <img class="promo-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
           <div class="promo-text">Promo baru!</div>
         </a>
-        
+
       </div>
       <div class="promo" id="promo2">
         <a href="/gerbong">
@@ -88,18 +101,18 @@
           <img class="promo-img" src="{{url('/images/train3.jpg')}}" alt="images"/>
           <div class="promo-text">Ayo naik kereta!</div>
         </a>
-        
+
       </div>
   </div>
 
   <!-- Search Box
   <div class="search">
-        
+
         <div class="search-ticket">
             <h3>Pesan Tiket Kereta</h3>
             <i class='fas fa-train fa-2x'></i>
         </div>
-        
+
         <div class="destination">
             <div class="departure">
                 <h5>Stasiun Awal</h5>
@@ -169,7 +182,7 @@
         </div>
 
 
-  
+
 
 
 
@@ -180,8 +193,8 @@
     <img class="desc-img" src="{{url('/images/train3.png')}}" alt="images"/>
     <div class="desc-container" id="cont3"></div>
     <div class="desc-text-left">Pesan Tiket Sekarang!</div>
-    <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud 
+    <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
     <a href="/search" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
   </div>
@@ -189,8 +202,8 @@
     <img class="desc-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
     <div class="desc-container" id="cont1"></div>
     <div class="desc-text-right">Promo Baru!</div>
-    <div class="desc-text-fill" id="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud 
+    <div class="desc-text-fill" id="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
     <a href="/promo" class="btn-container" id="promo-btn2"><div class="promo-btn">Pelajari</div></a>
   </div>
@@ -198,8 +211,8 @@
     <img class="desc-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
     <div class="desc-container" id="cont2"></div>
     <div class="desc-text-left">Gerbong Baru KAI</div>
-    <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud 
+    <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
     <a href="/gerbong" class="btn-container" id="promo-btn3"><div class="promo-btn">Pelajari</div></a>
   </div>

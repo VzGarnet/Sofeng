@@ -77,3 +77,8 @@ Route::get('/gerbong', function() {
 Route::get('/booking', function() {
     return view('booking');
 });
+
+Route::post('/register', 'App\Http\Controllers\FormController@processForm')->name('register');
+
+Route::post('/process-form', 'App\Http\Controllers\SortController@processForm')->name('process-form');
+

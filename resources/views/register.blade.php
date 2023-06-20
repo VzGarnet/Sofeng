@@ -49,7 +49,7 @@
       </li> -->
       <li class="nav-item">
         <a class="nav-link" href="/about">About Us</a>
-   
+
 
     </ul>
     <li class="Login">
@@ -70,34 +70,34 @@
 
     <!-- ini buat form -->
     <div class="kontener">
-        <form>
+        <form method="POST" action="/register">
             <div class="form-title">SIGN UP</div>
-            
+
+            @csrf
             <div class="form-group">
-                <div class="form-group-list"><label for="exampleInputEmail1">Email</label></div>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <div class="form-group-list"><label for="username">Username:</label></div>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
             </div>
+
             <div class="form-group">
-                <div class="form-group-list"><label for="exampleInputPassword1">Password</label></div>   
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <div class="form-group-list"><label for="email">Email:</label></div>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
+
             <div class="form-group">
-                <div class="form-group-list"><label for="exampleInputPassword1">Confirm password</label></div>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-type password">
+                <div class="form-group-list"><label for="password">Password:</label></div>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
+
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">I agree with all the terms and conditions</label>
             </div>
 
             <div class="for-button">
-                <button id="button1"><a href="/login" style="color: white; text-decoration: none">SIGN UP</a></button>
+                <button type="submit" id="button1" style="color: white; text-decoration: none">Sign Up</button>
             </div>
-            
-            <!-- <button type="signup" class="btn btn-primary">Sign up</button> -->
-            <!-- <button type="signup" class="btn btn-primary">Sign up</button> -->
 
-            <!-- Remind Password -->
             <div id="formFooter">
                 Already registered? <a id="underlineHover" href="/login">Login here</a>
             </div>
