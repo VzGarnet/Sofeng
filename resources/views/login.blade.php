@@ -12,7 +12,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Additional CSS -->
-  <link rel="stylesheet" href="{{asset('/css/login.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/loginfix.css')}}">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Login</title>
@@ -86,7 +86,7 @@
     </a>
   </div>
   <div class="register-acc">
-    New to Travail? <a id="regis" href="/register">Sign Up Now</a>
+    New to Travail? <a id="regis" href="/register">Sign up now</a>
   </div>
 </form>
 </div>
@@ -122,59 +122,59 @@
 
 <footer class="text-center text-white" style="top: 650px; position: relative;">
   <!-- Grid container -->
-  <div class="container pt-4">
+  <div class="container_pt-4">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Twitter -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-twitter"></i
       ></a>
 
       <!-- Google -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-instagram"></i
       ></a>
 
       <!-- Linkedin -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-linkedin"></i
       ></a>
       <!-- Github -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-github"></i
       ></a>
     </section>
@@ -183,9 +183,9 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center text-dark p-3">
+  <div class="text-center text-light" style="font-weight:bold">
     © 2023 Copyright:
-    <a class="text-dark" href="#">Travail</a>
+    <a class="text-light" href="#">Travail</a>
   </div>
   <!-- Copyright -->
 </footer>

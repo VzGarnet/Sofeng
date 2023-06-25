@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ asset('css/payment.css') }}">
 
     <!-- Additional JS -->
-    <script src="\public\js\payment.js"></script>
+    <script src="{{ asset('js/payment.js') }}"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -166,90 +166,93 @@
           <div style="color: green;">Convenience Fee<span class="tabs">Rp 0,-</span></div>
           <div>Service Fee<span class="tabs">Rp {{ number_format($serviceFee,0,",","." ) }},-</span></div>
           <div>Unique Code<span class="tabs">Rp {{ number_format($uniqueCodeFee,0,",","." ) }},-</span></div>
+          <div style="border:2px solid black; width: 55vw; margin-left: 3vw; margin-top: 3vh;"></div>
           <h2 class="form-title" id="endTotal">Total<span class="tabs">Rp {{ number_format($total,0,",","." ) }},-</span></h2>
         </div>
       </div>
 
-      <!-- <div class="right-box">
+      <div class="right-box">
         <div class="payment-form" id="virtual-acc">
-          <h2 class="form-title">Credit Card</h2>
+          <h2 class="form-title">Virtual Account</h2>
           <form>
             <div class="subtitle">Destination</div>
             <div class="payment-choice">
               <input type="radio" id="cba-card" name="payment-choice" value="cba-card">
-              <label for="cba-card">CBA Card<img class="payment-logo" id="logo-cba" src="{{url('/images/logo-cba.png')}}" alt="Image"/></label>
+              <label for="cba-card">CBA VA<img class="payment-logo" id="logo-cba" src="{{url('/images/logo-cba.png')}}" alt="Image"/></label>
             </div>
             <div class="payment-choice">
               <input type="radio" id="inb-card" name="payment-choice" value="inb-card">
-              <label for="inb-card">INB Card<img class="payment-logo" id="logo-inb" src="{{url('/images/logo-inb.png')}}" alt="Image"/></label>
+              <label for="inb-card">INB VA<img class="payment-logo" id="logo-inb" src="{{url('/images/logo-inb.png')}}" alt="Image"/></label>
             </div>
             <div class="payment-choice">
               <input type="radio" id="diriman-card" name="payment-choice" value="diriman-card">
-              <label for="diriman-card">Diriman Card<img class="payment-logo" id="logo-diriman" src="{{url('/images/logo-diriman.png')}}" alt="Image"/></label>
+              <label for="diriman-card">Diriman VA<img class="payment-logo" id="logo-diriman" src="{{url('/images/logo-diriman.png')}}" alt="Image"/></label>
             </div>
           </form>
         </div>
       </div>
-    </div> -->
+    </div>
 
+
+    <div class='payment-btn'></div>
 </body>
 
 
   <footer class="text-center text-white">
   <!-- Grid container -->
-  <div class="container pt-4">
+  <div class="container_pt-4">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Twitter -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-twitter"></i
       ></a>
 
       <!-- Google -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-instagram"></i
       ></a>
 
       <!-- Linkedin -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-linkedin"></i
       ></a>
       <!-- Github -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-github"></i
       ></a>
     </section>
@@ -258,14 +261,14 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center text-dark p-3">
+  <div class="text-center text-light" style="font-weight:bold">
     © 2023 Copyright:
-    <a class="text-dark" href="#">Travail</a>
+    <a class="text-light" href="#">Travail</a>
   </div>
   <!-- Copyright -->
 </footer>
 
-<script>
+<!-- <script>
   function creditCard() {
     var x = document.getElementById("credit-card");
     if (x.style.display === "none") {
@@ -274,8 +277,31 @@
       x.style.display = "none";
     }
   }
-</script>
-
-
+</script> -->
 
   </html>
+
+<script>
+    const cCard = document.querySelector('#credit-card');
+    const virAcc = document.querySelector('#virtual-acc');
+
+  let creditCard = function(){
+    if(cCard.style.display == 'none'){
+      cCard.style.display = 'block';
+      virAcc.style.display = 'none';
+    }
+    else{
+      cCard.style.display = 'none';
+    }
+  }
+
+  let virtualAcc = function(){
+    if(virAcc.style.display == 'none'){
+      virAcc.style.display = 'block';
+      cCard.style.display = 'none';
+    }
+    else{
+      virAcc.style.display = 'none';
+    }
+  }
+</script>

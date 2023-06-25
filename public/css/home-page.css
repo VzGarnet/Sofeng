@@ -1,56 +1,73 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: auto;
+    width: auto;
+}
+
 #container-header{
     position: absolute;
     width: 100%;
     height: 47vh;
-    top: 50px;
+    margin-top: 3vh;
+    z-index: 1;
 
     background: radial-gradient(100% 1302.5% at 0% 100%, #800020 0%, #FF0040 100%)
 }
 
 .promo{
-    margin-top: -100px;
+    margin-top: -13vh;
+    /* top: -30vh; */
 }
 
 .promo-img{
-    width: 230px;
-    height: 230px;
+    width: 15vw;
+    height: 30.8vh;
+
+    align-items: center;
+    justify-content: center;
 
     object-fit: cover;
     border-radius: 10%;
+
+    margin-left: 20vw;
 }
 
 #promo1{
-    position: absolute;
-    left: 341px;
-    top: 164px;
+    position: relative;
+    top: 21vh;
+    margin-left: 23vw;
 }
 
 #promo2{
-    position: absolute;
-    left: 605px;
-    top: 164px;
+    position: relative;
+    top: 3vh;
+    margin-left: 45vw;
 }
 
 #promo3{
-    position: absolute;
-    left: 869px;
-    top: 164px;
+    position: relative;
+    top: -15vh;
 }
 
 .promo-text{
     position: absolute;
-    top: 90%;
-    left: 50%;
+    /* margin-left: 28vw; */
+    margin-left: -7.3vw;
+    top: 26vh;
     transform: translate(-50%, -50%);
-
-    width: 200px;
+    z-index: 10000;
 
     color: azure;
     text-align: center;
     font-size: large;
     font-weight: bolder;
-    text-shadow: 2px 1px black;
+    text-shadow: 3px 2px 1px black;
 }
+
+.promo-text:hover{text-decoration: none; color: azure;}
 
 .desc-box{
     width: 100%;
@@ -59,6 +76,7 @@
 .desc-img{
     width: 100%;
     height: 600px;
+    object-fit: cover;
 }
 
 .desc-container{
@@ -69,23 +87,23 @@
 
 #cont1{
     position: absolute;
-    top: -50px;
+    top: 0vh;
 
-    height: 650px;
+    height: 80.4vh;
 }
 
 #cont2{
     position: absolute;
-    top: 0px;
+    top: 0vh;
 
-    height: 600px;
+    height: 80.4vh;
 }
 
 #cont3{
     position: absolute;
-    top: 0px;
+    top: 0vh;
 
-    height: 600px;
+    height: 80.4vh;
 }
 
 #desc1{
@@ -101,7 +119,7 @@
 
 #desc3{
     position: relative;
-    margin-top: -21vh;
+    margin-top: -14vh;
 }
 
 .desc-text-left{
@@ -189,7 +207,17 @@
 .promo-btn:active{text-decoration: none;}
 
 
-footer{
+/* footer{
     margin-top: 1vh;
     width: 100%;
+} */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .btn-link {
+    color: #fff;
+    text-decoration: none;
 }

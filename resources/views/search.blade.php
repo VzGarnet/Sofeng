@@ -34,7 +34,7 @@ use Illuminate\Support\Carbon;
   </head>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a href="/welcome">
+  <a href="/home">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@ use Illuminate\Support\Carbon;
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Bebas</a>
@@ -55,7 +55,7 @@ use Illuminate\Support\Carbon;
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/search">Booking Ticket</a>
-          <a class="dropdown-item" href="/cekorder1">Check Order</a>
+          <a class="dropdown-item" href="/cekorder">Check Order</a>
           <!-- <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
@@ -64,7 +64,7 @@ use Illuminate\Support\Carbon;
         <a class="nav-link disabled" href="#">Disabled</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="/about">About Us</a>
 
 
     </ul>
@@ -175,74 +175,74 @@ use Illuminate\Support\Carbon;
  <br>
  <br>
 
-  <footer class="text-center text-white">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+ <footer class="text-center text-white" style="top: 750px; position: relative">
+    <!-- Grid container -->
+    <div class="container_pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+        <!-- Facebook -->
+        <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="light"
+            ><i class="fab fa-facebook-f"></i
+        ></a>
 
-      <!-- Twitter -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-twitter"></i
-      ></a>
+        <!-- Twitter -->
+        <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="light"
+            ><i class="fab fa-twitter"></i
+        ></a>
 
-      <!-- Google -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
+        <!-- Google -->
+        <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="light"
+            ><i class="fab fa-google"></i
+        ></a>
 
-      <!-- Instagram -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
+        <!-- Instagram -->
+        <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="light"
+            ><i class="fab fa-instagram"></i
+        ></a>
 
-      <!-- Linkedin -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+        <!-- Linkedin -->
+        <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="light"
+            ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="light"
+            ><i class="fab fa-github"></i
+        ></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center text-dark p-3">
-    © 2023 Copyright:
-    <a class="text-dark" href="#">Travail</a>
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
+    <div class="text-center text-light" style="font-weight:bold">
+        © 2023 Copyright:
+        <a class="text-light" href="#">Travail</a>
+    </div>
+    <!-- Copyright -->
 </footer>
 
 

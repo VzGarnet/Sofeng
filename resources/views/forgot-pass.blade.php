@@ -12,7 +12,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Additional CSS -->
-  <link rel="stylesheet" href="{{asset('/css/login.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/loginfix.css')}}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Forgot Password</title>
@@ -67,7 +67,7 @@
 <!-- Form -->
 <form class="login-form" id="container">
   <div class="form-group">
-    <h2 id="form-header">Change Password</h2>
+    <h2 id="form-header">CHANGE PASSWORD</h2>
     <label class="email-pass" for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter registered email">
   </div>
@@ -84,6 +84,9 @@
       <button type="submit" class="btn btn-primary" id="confirm"><a href="/login" style="color: white; text-decoration: none">CONFIRM</a></button>
     </a>
   </div>
+  <div class="register-acc">
+    Back to <a id="regis" href="/login">Login</a>
+  </div>
 </form>
 
     <!-- Optional JavaScript -->
@@ -95,61 +98,61 @@
 
 
 
-  <footer class="text-center text-white" style="top: 750px; position: relative;">
+  <footer class="text-center text-white" style="top: 650px; position: relative;">
   <!-- Grid container -->
-  <div class="container pt-4">
+  <div class="container_pt-4">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Twitter -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-twitter"></i
       ></a>
 
       <!-- Google -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-instagram"></i
       ></a>
 
       <!-- Linkedin -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-linkedin"></i
       ></a>
       <!-- Github -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-github"></i
       ></a>
     </section>
@@ -158,9 +161,9 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center text-dark p-3">
+  <div class="text-center text-light p">
     © 2023 Copyright:
-    <a class="text-dark" href="#">Travail</a>
+    <a class="text-light" href="#">Travail</a>
   </div>
   <!-- Copyright -->
 </footer>

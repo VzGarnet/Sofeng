@@ -18,7 +18,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="/welcome">
+    <a href="/home">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,59 +79,59 @@
 
 <footer class="text-center text-white" style="top: 750px; position: relative">
     <!-- Grid container -->
-    <div class="container pt-4">
+    <div class="container_pt-4">
         <!-- Section: Social media -->
         <section class="mb-4">
         <!-- Facebook -->
         <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            class="btn btn-link btn-floating btn-lg text-light m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
+            data-mdb-ripple-color="light"
             ><i class="fab fa-facebook-f"></i
         ></a>
 
         <!-- Twitter -->
         <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            class="btn btn-link btn-floating btn-lg text-light m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
+            data-mdb-ripple-color="light"
             ><i class="fab fa-twitter"></i
         ></a>
 
         <!-- Google -->
         <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            class="btn btn-link btn-floating btn-lg text-light m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
+            data-mdb-ripple-color="light"
             ><i class="fab fa-google"></i
         ></a>
 
         <!-- Instagram -->
         <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            class="btn btn-link btn-floating btn-lg text-light m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
+            data-mdb-ripple-color="light"
             ><i class="fab fa-instagram"></i
         ></a>
 
         <!-- Linkedin -->
         <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            class="btn btn-link btn-floating btn-lg text-light m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
+            data-mdb-ripple-color="light"
             ><i class="fab fa-linkedin"></i
         ></a>
         <!-- Github -->
         <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            class="btn btn-link btn-floating btn-lg text-light m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
+            data-mdb-ripple-color="light"
             ><i class="fab fa-github"></i
         ></a>
         </section>
@@ -140,9 +140,9 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center text-dark p-3">
+    <div class="text-center text-light" style="font-weight:bold">
         © 2023 Copyright:
-        <a class="text-dark" href="#">Travail</a>
+        <a class="text-light" href="#">Travail</a>
     </div>
     <!-- Copyright -->
 </footer>

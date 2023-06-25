@@ -1,49 +1,50 @@
 .title{
     position: absolute;
-    top: 60px;
-    left: 70px;
+    top: 7vh;
+    left: 5vw;
 }
 
 .order-det{
     border: 2px solid black;
     border-radius: 5px;
 
-    position: absolute;
-    top: 110px;
-    left: 70px;
+    position: relative;
+    top: 8vh;
+    left: 5vw;
 
-    width: 785px;
-    height: 430px;
+    width: 50vw;
+    height: 57vh;
 }
 
 .small-containers{
     border: 2px solid black;
     border-radius: 5px;
-    height: 200px;
-    width: 40%;
+    height: 27.3vh;
+    width: 40vw;
 
-    line-height: 18px;
+    line-height: 17px;
 }
 
 .container-head{
     /* border: 0.5px solid black; */
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     background: radial-gradient(100% 48034.03% at 0% 100%, #800020 0%, #FF0040 100%);
     width: 100%;
 
     color: azure;
     font-weight: 600;
     font-size: 24px;
-    text-indent: 20px;
-    padding: 20px;
+    text-indent: 2vh;
+    padding: 2vh;
 
     margin-bottom: 1vh;
 }
 
 #passenger-info{
-    position: absolute;
-    left: 900px;
-    top: 110px;
+    position: relative;
+    left: 58vw;
+    top: -49vh;
     text-indent: 3vh;
 }
 
@@ -54,8 +55,8 @@
 
 .datas{
     /* color: red; */
-    margin-top: -35px;
-    margin-left: 350px;
+    margin-top: -4vh;
+    margin-left: 25vw;
 }
 
 .hl{
@@ -63,14 +64,14 @@
     width: 90%;
 
     position: relative;
-    left: 20px
+    left: 1vw;
 
 }
 
 #payment-info{
-    position: absolute;
-    left: 900px;
-    top: 333px;
+    position: relative;
+    left: 58vw;
+    top: -46.3vh;
     text-indent: 3vh;
 }
 
@@ -163,31 +164,33 @@
 }
 
 #payment-title{
-    position: absolute;
-    top: 570px;
+    position: relative;
+    top: -45vh;
 }
 
 .payment-box{
     border: 2px solid black;
-    border-radius: 2%;
+    border-radius: 10px;
+    border-left: none;
 
-    position: absolute;
-    top: 650px;
-    left: 100px;
+    position: relative;
+    top: -45vh;
+    left: 5vw;
 
-    height: 718px;
+    height: 725px;
     width: 1300px;
 }
 
 .left-box{
     box-sizing: border-box;
 
-    position: absolute;
-    width: 337px;
-    height: 718px;
+    position: relative;
+    width: 22vw;
+    height: 96vh;
 
     background: radial-gradient(100% 108.43% at 0% 100%, #800020 23.56%, #FF0040 100%);
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .payment-type{
@@ -201,12 +204,21 @@
     font-size: 24px;
     text-align: left;
     padding-left: 25px;
+    transition-duration: 0.5s;
+}
+
+.payment-type:hover{
+    box-shadow: 0 5px 16px 0 bisque;
+    text-shadow: 1px 1px 10px white;
 }
 
 .right-box{
-    position: absolute;
-    padding-left: 337px;
-    width: 936px;
+    position: relative;
+    top: -96vh;
+    left: 17vw;
+
+    padding-left: 5vw;
+    width: 125.5vw;
 }
 
 .form-title{
@@ -253,31 +265,48 @@
     left: 38vw;
 }
 
+#credit-card, #virtual-acc{
+    position: relative;
+    display: none;
+}
+
 .tabs{
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 1vw;
 
     position: absolute;
-    right: -22vw;
+    right: 5vw;
 }
 
 .payment-det{
-    border-radius: 1%;
-    margin-top: 5vh;
+    position: absolute;
+    top: 56vh;
 
-    height: 100%;
-    width: 160.3%;
+    border-bottom-right-radius: 10px;
 
-    background-color: rgb(196, 196, 196);
+    height: 40vh;
+    width: 945px;
+
+    background-color: rgb(198, 198, 198);
 }
 
 #endTotal{
-    margin-top: 8.6vh;
+    margin-top: 5.4vh;
 }
 
-footer{
-    position: absolute;
-    top: 120%;
-    left: -20vw;
+/* footer{
+    position: relative;
+    top: 80vh;
+    left: -25vw;
     width: 150%;
+} */
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .btn-link {
+    color: #fff;
+    text-decoration: none;
 }

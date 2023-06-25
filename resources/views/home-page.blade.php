@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en">
+<!-- <a href="#desc1" style="z-index: 10;">TEST BUTTON</a>
+<a href="#desc2" style="z-index: 10;">TEST BUTTON</a> -->
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
   <!-- Add CSS -->
   <link href="{{ asset('css/home-page.css') }}" rel="stylesheet">
@@ -52,22 +55,9 @@
 
 
     </ul>
-
-    @php
-        $rec = DB::table('userLog')->get();
-    @endphp
-    @if ($rec->isEmpty())
-        <li class="Login">
-            <a class="login" href="/login">Login/Sign Up</a>
-        </li>
-    @else
-        @php
-            $rec = DB::table('userLog')->first();
-        @endphp
-        <li class="Login">
-            <a class="login" href="/login">{{$rec->username}}</a>
-        </li>
-    @endif
+    <li class="Login">
+        <a class="login" href="/login">Login/Sign Up</a>
+      </li>
     <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -83,27 +73,18 @@
 
     <div id="container-header">
       <div class="promo" id="promo1">
-        <a href="/promo">
-          <img class="promo-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
-          <div class="promo-text">Promo baru!</div>
-        </a>
-
-      </div>
+        <img class="promo-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
+        <a href="#desc2" class="promo-text">Promo baru!</a>
+    </div>
       <div class="promo" id="promo2">
-        <a href="/gerbong">
-          <img class="promo-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
-          <div class="promo-text">Gerbong baru KAI</div>
-        </a>
-
+        <img class="promo-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
+        <a href="#desc3" class="promo-text">Gerbong baru KAI</a>
       </div>
       <div class="promo" id="promo3">
-        <a href="/search">
-          <img class="promo-img" src="{{url('/images/train3.jpg')}}" alt="images"/>
-          <div class="promo-text">Ayo naik kereta!</div>
-        </a>
-
+        <img class="promo-img" src="{{url('/images/train3.jpg')}}" alt="images"/>
+        <a href="#desc1" class="promo-text">Ayo naik kereta!</a>
       </div>
-  </div>
+    </div>
 
   <!-- Search Box
   <div class="search">
@@ -189,92 +170,90 @@
     </div> -->
 
     <!-- Desc -->
-    <div class="desc-box" id="desc1">
+    <section class="desc-box" id="desc1">
     <img class="desc-img" src="{{url('/images/train3.png')}}" alt="images"/>
-    <div class="desc-container" id="cont3"></div>
-    <div class="desc-text-left">Pesan Tiket Sekarang!</div>
-    <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
-    <a href="/search" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
-  </div>
-  <div class="desc-box" id="desc2">
-    <img class="desc-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
     <div class="desc-container" id="cont1"></div>
-    <div class="desc-text-right">Promo Baru!</div>
-    <div class="desc-text-fill" id="text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
-    <a href="/promo" class="btn-container" id="promo-btn2"><div class="promo-btn">Pelajari</div></a>
-  </div>
-  <div class="desc-box" id="desc3">
-    <img class="desc-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
+    <div class="desc-text-left">Pesan Tiket Sekarang!</div>
+    <div class="desc-text-fill" id="text-left">Ingin berlibur naik kereta? Ayo pesan tiket sekarang agar tidak kehabisan.<br>
+    Dengan Travail, pemesanan tiket menjadi jauh lebih mudah.</div>
+    <a href="/booking" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
+    </section>
+  <section class="desc-box" id="desc2">
+    <img class="desc-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
     <div class="desc-container" id="cont2"></div>
+    <div class="desc-text-right">Promo Baru!</div>
+    <div class="desc-text-fill" id="text-right">Travail menyediakan beberapa promo untuk para pengguna setia.
+    <br>Yuk, cek kumpulan promo Travail di sini!</div>
+    <a href="/promo" class="btn-container" id="promo-btn2"><div class="promo-btn">Pelajari</div></a>
+  </section>
+  <section class="desc-box" id="desc3">
+    <img class="desc-img" src="{{url('/images/train2.jpg')}}" alt="images"/>
+    <div class="desc-container" id="cont3"></div>
     <div class="desc-text-left">Gerbong Baru KAI</div>
-    <div class="desc-text-fill" id="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod<br>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim<br>veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea<br>commodo consequat</div>
+    <div class="desc-text-fill" id="text-left">KAI telah menyediakan banyak gerbong baru untuk mengakomodir<br>
+    kenyamanan dan keperluan para pengguna jasa kereta api.<br>Simak lebih lanjut mengenai gerbong-gebong tersebut
+    di sini!</div>
     <a href="/gerbong" class="btn-container" id="promo-btn3"><div class="promo-btn">Pelajari</div></a>
-  </div>
-  </body>
+  </section>
+</body>
 
 
 
   <footer class="text-center text-white">
   <!-- Grid container -->
-  <div class="container pt-4">
+  <div class="container_pt-4">
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Twitter -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-twitter"></i
       ></a>
 
       <!-- Google -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-instagram"></i
       ></a>
 
       <!-- Linkedin -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-linkedin"></i
       ></a>
       <!-- Github -->
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        class="btn btn-link btn-floating btn-lg text-light m-1"
         href="#!"
         role="button"
-        data-mdb-ripple-color="dark"
+        data-mdb-ripple-color="light"
         ><i class="fab fa-github"></i
       ></a>
     </section>
@@ -283,9 +262,9 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center text-dark p-3">
+  <div class="text-center text-light" style="font-weight:bold">
     © 2023 Copyright:
-    <a class="text-dark" href="#">Travail</a>
+    <a class="text-light" href="#">Travail</a>
   </div>
   <!-- Copyright -->
 </footer>

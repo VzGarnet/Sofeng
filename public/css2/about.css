@@ -1,1 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .btn-link {
+    color: #fff;
+    text-decoration: none;
+}

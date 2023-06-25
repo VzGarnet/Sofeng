@@ -1,42 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
-/* form {
-    justify-content: center;
-} */
-
-.kontener{
+.kontener {
+    top: 5vh;
     position: relative;
-    /* width: 495px;
-    left: 560px;
-    top: 150px; */
-
-    width: 495px;
-    left: 10vh;
-    top: 150px;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
 
     border-style: outset;
     border-radius: 48px;
 
     background-color: white;
+    
     filter: drop-shadow(2px 4px 10px rgba(244, 47, 96, 0.5));
+    padding: 50px 40px 50px;
 
-
-    padding-top: 50px;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 60px;
-
-    /* font-size: 14px; */
+    margin-bottom: -87vh;
 }
+
 .kontener .form-title {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
     line-height: 39px;
-
     padding-bottom: 25px;
 
-    /* background: radial-gradient(131.15% 1283.37% at -7.79% 37.18%, #800020 0%, #FF0040 100%); */
     /* background: radial-gradient(118.5% 779.09% at 0% 48.72%, #6E001B 1%, #FF0040 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -50,23 +38,15 @@
 
 .kontener .form-group-list {
     font-weight: bold;
-    /* font-size: 18px; */
 }
 
 .kontener .form-control {
-    font-weight: 400px;
-    /* font-size: 12px; */
-    line-height: 15px;
-    color: #000000;
+    font-weight: 400;
 }
 
-/* .kontener .form-check-label {
-    font-family: 'Inter';
-} */
-
-/* #exampleInputPassword1, #exampleInputEmail1{
-    font-size: 12px;
-} */
+.for-button {
+    text-align: center;
+}
 
 /* Focused Inputs */
 input[type="text"]{border: 1px solid black;}
@@ -78,22 +58,11 @@ input[type="email"]:focus {border: 3px solid black;outline: none;}
 input[type="password"]{border: 1px solid black;}
 input[type="password"]:focus {border: 3px solid black;outline: none;}
 
-.for-button{
-    text-align: center;
-}
-
-#button1{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-
-    /* text-align: center; */
+#button1 {
     margin-top: 12px;
     margin-bottom: 20px;
-
     font-size: 18px;
     font-weight: 600;
-
     width: 150px;
     height: 40px;
     background: radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
@@ -102,26 +71,78 @@ input[type="password"]:focus {border: 3px solid black;outline: none;}
     border: none;
 }
 
-#button1:hover{text-shadow: 1px 1px 10px white; box-shadow: 1px 1px 10px red;}
+#button1:hover {
+    text-shadow: 1px 1px 10px white;
+    box-shadow: 1px 1px 10px red;
+}
 
 .kontener #formFooter {
     text-align: center;
+    font-size: 16px;
 }
 
-#underlineHover{
+#underlineHover {
     font-weight: bold;
     text-decoration: underline;
 }
 
-a#underlineHover:link{color: #FF0040;}
-a#underlineHover:visited{color: #FF0040;}
-a#underlineHover:hover{color: #FF0040; text-shadow: 1px 1px 10px red;}
-a#underlineHover:active{color: #FF0040;}
+a#underlineHover:link,
+a#underlineHover:visited {
+    color: #FF0040;
+}
 
-/* 6e001b */
+a#underlineHover:hover {
+    color: #FF0040;
+    text-shadow: 1px 1px 10px red;
+}
 
-/* @media screen and (min-device-width: 768px)
-    and (max-device-width: 1024px) {
-    .gfg-div {
-    }
+a#underlineHover:active {
+    color: #FF0040;
+}
+
+/* Navbar */
+/* .navbar {
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+.navbar img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
 } */
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .btn-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 576px) {
+    .kontener {
+        padding: 30px;
+    }
+
+    .kontener .form-title {
+        font-size: 24px;
+    }
+
+    #button1 {
+        width: 100%;
+    }
+
+    footer .container {
+        text-align: center;
+    }
+}

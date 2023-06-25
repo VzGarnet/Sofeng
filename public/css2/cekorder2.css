@@ -16,6 +16,7 @@
     border-radius: 30px;
     cursor: pointer;
     justify-items: center;
+    margin-right: 10px;
 }
 
 .wrappers ul li #januari{
@@ -64,9 +65,9 @@
 
 #month{
     padding-left: 95px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .kontenhistory{
@@ -133,9 +134,19 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
 }
 
 #space{
     padding-bottom: 30px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer .btn-link {
+    color: #fff;
+    text-decoration: none;
 }
