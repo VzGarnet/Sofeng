@@ -122,26 +122,28 @@ body{
     margin-top: -14vh;
 }
 
+/* NEED REVIEW */
 .desc-text-left{
-    position: relative;
+    /* position: relative;
     top: -320px;
     left: 100px;
 
     color: azure;
     font-size: 64px;
     font-weight: bolder;
-    text-shadow: 2px 1px black;
+    text-shadow: 2px 1px black; */
 }
 
+/* NEED REVIEW */
 .desc-text-right{
-    position: relative;
+    /* position: relative;
     top: -320px;
     right: -1070px;
 
     color: azure;
     font-size: 64px;
     font-weight: bolder;
-    text-shadow: 2px 1px black;
+    text-shadow: 2px 1px black; */
 }
 
 .desc-text-fill{
@@ -151,18 +153,20 @@ body{
     color: azure;
 }
 
+/* NEED REVIEW */
 #text-left{
-    position: relative;
+    /* position: relative;
     top: -330px;
-    left: 100px;
+    left: 100px; */
 }
 
+/* NEED REVIEW */
 #text-right{
-    position: relative;
+    /* position: relative;
     top: -330px;
     right: 75px;
 
-    text-align: right;
+    text-align: right; */
 }
 
 .btn-container{

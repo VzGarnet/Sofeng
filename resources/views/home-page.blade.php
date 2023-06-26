@@ -1,4 +1,7 @@
-<!doctype html>
+@extends('layouts.app')
+
+@section('content')
+<!DOCTYPE html>
 <html lang="en">
 <!-- <a href="#desc1" style="z-index: 10;">TEST BUTTON</a>
 <a href="#desc2" style="z-index: 10;">TEST BUTTON</a> -->
@@ -6,11 +9,12 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
   <!-- Add CSS -->
   <link href="{{ asset('css/home-page.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/search-home.css') }}" rel="stylesheet">
+  {{-- <link href="{{ asset('css/search-home.css') }}" rel="stylesheet"> --}}
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,7 +24,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a href="#">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
   </a>
@@ -63,7 +67,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
   </div>
-</nav>
+</nav> --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -85,89 +89,6 @@
         <a href="#desc1" class="promo-text">Ayo naik kereta!</a>
       </div>
     </div>
-
-  <!-- Search Box
-  <div class="search">
-
-        <div class="search-ticket">
-            <h3>Pesan Tiket Kereta</h3>
-            <i class='fas fa-train fa-2x'></i>
-        </div>
-
-        <div class="destination">
-            <div class="departure">
-                <h5>Stasiun Awal</h5>
-                <select class="departure-select">
-                    <option>Asal</option>
-                </select>
-            </div>
-
-            <div class="vice-versa">
-                <img src="{{url('/images/vice versa.png')}}" alt="Image"/>
-            </div>
-
-            <div class="arrival">
-                <h5>Stasiun Tujuan</h5>
-                <select class="arrival-select">
-                    <option>Tujuan</option>
-                </select>
-            </div>
-        </div>
-
-     <br>
-
-        <div class="detail">
-            <div class="departure-date">
-              <h5>Tanggal Pergi</h5>
-              <div class="date-picker" id="datepicker">
-                <input type="date" class="form-control" id="departure-date"/>
-                <span class="input-group-append">
-                </span>
-                </span>
-              </div>
-            </div>
-
-            <div class="arrival-date">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                <h5>Tanggal Pulang</h5>
-                </label>
-              </div>
-              <div class="date-picker" id="datepicker">
-                <input type="date" class="form-control" id="date"/>
-                <span class="input-group-append">
-                </span>
-                </span>
-              </div>
-            </div>
-
-            <div class="passenger">
-              <h5>Penumpang</h5>
-              <div class="quantity">
-                <div class="adult">
-                  <input type="number" id="adultTicket" name="adultTicket" min="0" max="5" value="0">
-                  <label for="adultTicket">Dewasa</label>
-                </div>
-
-                <div class="child">
-                  <input type="number" id="childTicket" name="childTicket" min="0" max="2" value="0">
-                  <label for="childTicket">Anak</label>
-                </div>
-              </div>
-            </div>
-
-            <button type="submit" id="btn-search">Cari Tiket</button>
-
-
-        </div>
-
-
-
-
-
-
-    </div> -->
 
     <!-- Desc -->
     <section class="desc-box" id="desc1">
@@ -271,6 +192,5 @@
 
 
 
-
-
-  </html>
+</html>
+@endsection

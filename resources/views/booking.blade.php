@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,10 +16,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Travail</title>
-    
+
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a href="/home">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
   </a>
@@ -40,20 +43,20 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/about">About Us</a>
-   
+
 
     </ul>
     <li class="Login">
         <a class="login" href="/login">Login/Sign Up</a>
       </li>
   </div>
-</nav>
+</nav> --}}
 
     <div class="penumpang">
         <h5>Data Penumpang</h5>
         <div class="detail-penumpang">
             <div class="data-penumpang">
-                <p>Penumpang 1</p> 
+                <p>Penumpang 1</p>
                 <!-- disesuaikan dengan jumlah tiket nanti -->
             </div>
 
@@ -90,13 +93,13 @@
 
         <div class="detail-penumpang">
             <div class="select-seat">
-                <p>Pilih Kursi</p> 
+                <p>Pilih Kursi</p>
             </div>
 
             <div class="gerbong">
                 <h6>Pilih Gerbong</h6>
                 <select class="gerbong-select">
-                    <option selected>Pilih Gerbong</option> 
+                    <option selected>Pilih Gerbong</option>
                     <option>Gerbong 1</option>
                     <option>Gerbong 2</option>
                     <option>Gerbong 3</option>
@@ -158,8 +161,8 @@
                     <h5>Convenience Fee</h5>
                     <h5>GRATIS</h5>
                 </div>
-                 
-          
+
+
         </div>
         </div>
     </div>
@@ -183,13 +186,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+
 
 
 </body>
-    
 
-<footer class="text-center text-white" style="top: 750px; position: relative">
+
+{{-- <footer class="text-center text-white" style="top: 750px; position: relative">
     <!-- Grid container -->
     <div class="container_pt-4">
         <!-- Section: Social media -->
@@ -258,9 +261,12 @@
     </div>
     <!-- Copyright -->
 </footer>
- 
+ --}}
 
 
 
 
   </html>
+
+
+@endsection

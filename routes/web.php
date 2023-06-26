@@ -34,8 +34,8 @@ Route::get('/cekorder', function () {
     return view('cekorder1');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/', function () {
+    return view('home-page');
 });
 
 Route::get('/about', function () {
@@ -46,7 +46,7 @@ Route::get('/forgot-pass', function() {
     return view('forgot-pass');
 });
 
-Route::get('/home', function(){
+Route::get('/home-page', function(){
     return view('home-page');
 });
 
@@ -78,7 +78,18 @@ Route::get('/booking', function() {
     return view('booking');
 });
 
+Route::get('/banner1', function() {
+    return view('banner1');
+});
+
+Route::get('/banner2', function() {
+    return view('banner2');
+});
+
 Route::post('/register', 'App\Http\Controllers\FormController@processForm')->name('register');
 
 Route::post('/process-form', 'App\Http\Controllers\SortController@processForm')->name('process-form');
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

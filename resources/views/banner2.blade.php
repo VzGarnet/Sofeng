@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('css2/about.css')}}">
+    <link rel="stylesheet" href="{{asset('css2/banner2.css')}}">
 
     <title>Cek Order</title>
 </head>
@@ -72,20 +72,15 @@
         <div class="desc-text-center">ABOUT</div>
     </div> -->
 
-    <div class="headerabout">
-        <h1>About Us<h1>
-    </div>
-
-    <div class="row">
-        <div class="column">
-            <h2>Travail: <br>Connecting Indonesia</h2>
-            <p>Travail adalah aplikasi untuk mengatasi permasalahan transportasi khususnya di Indonesia. Kami menyadari bahwa kemacetan di daerah JABODETABEK merupakan suatu yang sangat sering terjadi. Travail menciptakan pengalaman transportasi umum yang cepat dan efisien. Kami sangat memperhatikan pengalaman pengguna sehingga mudah digunakan bagi siapa saja. Dikarenakan Travail menyediakan fitur yang dirancang untuk memenuhi kebutuhan user, seperti pemesanan tiket pulang dan pemesanan tiket pergi.</p>
-        </div>
-        <div class="column">
-            <p>Kami berkomitmen untuk terus mengembangkan aplikasi kami dengan mengambil masukan dari masyarakat untuk meningkatkan kualitas layanan kami. Travail percaya bahwa transportasi umum yang efisien dan mudah diakses merupakan suatu kunci untuk mengatasi kemacetan yang terjadi di Indonesia. Dengan teknologi terkini dan juga terfokus pada pengalaman pengguna, Travail bertujuan untuk menjadi solusi yang dapat diandalkan bagi masyarakat Indonesia dalam perjalanan sehari-hari mereka.</p>
-
-            <h2>Travel & Rail</h2>
-            <p>Travail merupakan kepanjangan dari TRAVel and rAIL. Kereta api merupakan suatu transportasi yang populer baik untuk perjalanan jarak jauh. Dan perjalanan kereta api umumnya melibatkan transportasi dengan kereta api di jaringan rel kereta api. Dikarenakan kereta api memiliki banyak manfaat seperti kemudahan dan kenyamanan, maka dari itu jadilah Travail. Travail menjadi suatu solusi dan jawaban dari permasalahan travel dan rail di Indonesia.</p>
+    <div class = banner2>
+        <img src = "/images/Promo2 1.png" alt="Banner2">
+        <div class = text>
+            <h1>Syarat dan Ketentuan</h1>
+            <p> 1. Pemesanan tiket berlaku mulai 14-18 April 2023 <br>
+                2. Pembelian promo dapat melalui website Travail <br>
+                3. Hanya berlaku bagi kereta api tujuan Jakarta Surabaya <br>
+                4. Ketentuan barang bawaan pengguna dibatasi dengan berat maksimum 35 kg
+                5. Pengguna dengan usia di atas 3 tahun dan atau tinggi badan diatas 90cm diwajibkan memiliki tiket</p>
         </div>
     </div>
 

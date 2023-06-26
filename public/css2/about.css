@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
+h1{
+    color:white;
+    text-align: center;
+    margin: 0;
+    padding-top: 5vh;
+}
+
+h2{
+    margin:25px;
+}
+
+p{
+    margin:25px;
+    text-align: justify;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.headerabout{
+    background-image : url("/images/aboutus.png");
+    background-repeat : no-repeat;
+    background-size : 100vw;
+    background-position : center;
+    height : 20vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 footer {
     background-color: #f8f9fa;
     padding: 20px 0;

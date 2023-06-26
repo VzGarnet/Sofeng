@@ -92,6 +92,40 @@ input[type="password"]:focus {border: 3px solid black;outline: none;}
     text-decoration: underline;
 }
 
+#resetpass{
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    background: radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+    border-radius: 28px;
+    color: white;
+
+    border: 0px;
+    width: 250px;
+}
+
+#confirmpass{
+    text-align: center;
+}
+
+#confirmresetpass{
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    background: radial-gradient(135% 2304% at 0% -20%, #800020 4.3%, #FF0040 100%);
+    border-radius: 28px;
+    color: white;
+
+    border: 0px;
+    width: 200px;
+}
+
 #regis {
     font-size: 16px;
     font-weight: bold;
