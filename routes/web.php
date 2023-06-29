@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/payment', function () {
     return view('payment');
@@ -22,13 +25,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+// Route::get('/register', function () {
+//     return view('register');
+// });
 
-Route::get('/login', function () {
-    return view('login');
-});
+// Route::get('/login', function () {
+//     return view('login');
+// });
 
 Route::get('/cekorder', function () {
     return view('cekorder1');
@@ -82,14 +85,16 @@ Route::get('/banner1', function() {
     return view('banner1');
 });
 
+Route::get('/test', function() {
+    return view('test');
+});
+
 Route::get('/banner2', function() {
     return view('banner2');
 });
 
-Route::post('/register', 'App\Http\Controllers\FormController@processForm')->name('register');
-
 Route::post('/process-form', 'App\Http\Controllers\SortController@processForm')->name('process-form');
 
-Auth::routes();
+Route::post('/cari-tiket', 'App\Http\Controllers\SortController@cariTiket')->name('cari-tiket');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/proses-tiket', 'App\Http\Controllers\SortController@prosesTiket')->name('proses-tiket');

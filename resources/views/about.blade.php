@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
     <title>Cek Order</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="/welcome">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
     </a>
@@ -60,7 +63,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
     </div>
-    </nav>
+    </nav> --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -91,7 +94,7 @@
 
 </body>
 
-<footer class="text-center text-white" style="top: 750px; position: relative">
+{{-- <footer class="text-center text-white" style="top: 750px; position: relative">
     <!-- Grid container -->
     <div class="container pt-4">
         <!-- Section: Social media -->
@@ -159,6 +162,9 @@
         <a class="text-dark" href="#">Travail</a>
     </div>
     <!-- Copyright -->
-</footer>
+</footer> --}}
 
 </html>
+
+@include('layouts.foot')
+@endsection

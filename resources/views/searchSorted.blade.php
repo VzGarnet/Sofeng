@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!doctype html>
 <html lang="en">
 
@@ -33,7 +36,7 @@ use Illuminate\Support\Carbon;
 
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a href="/home">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
   </a>
@@ -76,11 +79,11 @@ use Illuminate\Support\Carbon;
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
   </div>
-</nav>
+</nav> --}}
 
-
-   <div class="search">
-
+<form action="{{ route('cari-tiket') }}" method="POST">
+    @csrf
+    <div class="search">
         <div class="search-ticket">
             <h3>Pesan Tiket Kereta</h3>
             <i class='fas fa-train fa-2x'></i>
@@ -89,37 +92,39 @@ use Illuminate\Support\Carbon;
         <div class="destination">
             <div class="departure">
                 <h5>Stasiun Awal</h5>
-                <select class="departure-select">
-                    <option>Asal</option>
+                <select class="departure-select" name="stAwal">
+                    <option value="JKT">JKT</option>
+                    <option value="SMG">SMG</option>
                 </select>
             </div>
 
             <div class="vice-versa">
-                <img src="{{url('/images/vice versa.png')}}" alt="Image"/>
+                <img src="{{url('/images/3031716.png')}}" alt="Image"/>
             </div>
 
             <div class="arrival">
                 <h5>Stasiun Tujuan</h5>
-                <select class="arrival-select">
-                    <option>Tujuan</option>
+                <select class="arrival-select" name="stAkhir">
+                    <option value="JKT">JKT</option>
+                    <option value="SMG">SMG</option>
                 </select>
             </div>
         </div>
 
-     <br>
+        <br>
 
         <div class="detail">
             <div class="departure-date">
-              <h5>Tanggal Pergi</h5>
-              <div class="date-picker" id="datepicker">
-                <input type="date" class="form-control" id="departure-date"/>
-                <span class="input-group-append">
-                </span>
-                </span>
-              </div>
+
+                <h5>Tanggal Pergi</h5>
+
+                <div class="date-picker" id="datepicker">
+                    <input type="date" class="form-control" id="departure-date" name="tanggal">
+                </div>
+
             </div>
 
-            <!-- <div class="arrival-date">
+           {{-- <div class="arrival-date">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
@@ -132,28 +137,32 @@ use Illuminate\Support\Carbon;
                 </span>
                 </span>
               </div>
-            </div> -->
+            </div> --}}
 
-            <div class="passenger">
-              <h5>Penumpang</h5>
-              <div class="quantity">
-                <div class="adult">
-                  <input type="number" id="adultTicket" name="adultTicket" min="0" max="5" value="0">
-                  <label for="adultTicket">Dewasa</label>
+            {{-- <div class="passenger">
+
+                <h5>Penumpang</h5>
+
+                <div class="quantity">
+                    <div class="adult">
+                        <input type="number" id="adultTicket" name="adultTicket" min="0" max="5" value="0">
+                        <label for="adultTicket">Dewasa</label>
+                    </div>
+
+                <div class="child">
+                    <input type="number" id="childTicket" name="childTicket" min="0" max="2" value="0">
+                    <label for="childTicket">Anak</label>
                 </div>
 
-                <!-- <div class="child">
-                  <input type="number" id="childTicket" name="childTicket" min="0" max="2" value="0">
-                  <label for="childTicket">Anak</label>
-                </div> -->
-              </div>
-            </div>
+                </div>
+            </div> --}}
 
             <button type="submit" id="btn-search">Cari Tiket</button>
 
 
         </div>
     </div>
+</form>
 
     <h3 style="margin-top: 2vh; margin-left: 5vw; ">{{ $departStation}} ({{($departCity)}}) <-->  {{$arriveStation}} ({{($arriveCity)}})</h3>
 
@@ -164,13 +173,19 @@ use Illuminate\Support\Carbon;
   </div>
 
 
-<form action="{{ route('process-form') }}" method="POST" style="margin:2vw">
+  {{-- <form action="{{ route('process-form') }}" method="POST" style="margin:2vw">
     @csrf
-    <input type="text" name="userInput" placeholder="[0/1] = [DESC/ASC]">
-    <button type="submit">Submit</button>
+    <input type="hidden" name="userInput" value="0">
+    <button type="submit">Sort 1</button>
 </form>
 
-@if ($userInput)
+<form action="{{ route('process-form') }}" method="POST" style="margin:2vw">
+    @csrf
+    <input type="hidden" name="userInput" value="1">
+    <button type="submit">Sort 2</button>
+</form> --}}
+
+{{-- @if ($userInput)
     @php
         $argos = DB::table('argo')->orderBy('harga')->get();
     @endphp
@@ -178,23 +193,36 @@ use Illuminate\Support\Carbon;
     @php
         $argos = DB::table('argo')->orderByDesc('harga')->get();
     @endphp
-@endif
+@endif --}}
 
-@foreach ($argos as $argo)
-<div class="train-cont">
-    <div  class="big-text" id="train-name">{{ $argo->argoName }}</div>
-    <div class="small-text" id="train-class">{{ $argo->kelasArgo }}</div>
-    <h3 class="price">Rp {{ number_format($argo->harga,0,",","." ) }},-</h3>
-    <div class="small-text" id="dep-head">Departure:</div>
-    <div  class="big-text" id="dep-time">{{ $formatedDepart }}</div>
-    <div class="small-text" id="dep-station">{{ $argo->stasiunAwal }} ({{ $argo->tujuanAwal }})</div>
-    <div class="small-text" id="arr-head">Arrival:</div>
-    <div  class="big-text" id="arr-time">{{ $formatedArrive }}</div>
-    <div class="small-text" id="arr-station">{{ $argo->stasiunAkhir }} ({{ $argo->tujuanAkhir }})</div>
-    <div class="small-text" id="est-head">Estimate:</div>
-    <div  class="big-text" id="est-time">{{ $diffHour }} hour(s) {{ $diffMin }} minute(s)</div>
-    <div class="small-text" id="est-type">Transit</div>
-  </div>
+@php
+    $argos = DB::table('argo')->where('stBID', '=', $stasiunAwal)
+    ->where('stTID', '=', $stasiunAkhir)
+    ->where('tanggal', '=', $tanggalBrgkt)->get();
+@endphp
+
+ @foreach ($argos as $argo)
+ <div class="train-cont">
+    <form action="{{ route('process-form') }}" method="POST">
+        @csrf
+        <div>
+            <button type="submit" value="{{ $argo->argoID }}" class="btn-search" name="identifierArgo">Pilih</button>
+        </div>
+        <div class="big-text" id="train-name">{{ $argo->namaArgo }}</div>
+        <div class="small-text" id="train-class">{{ $argo->kelasArgo }}</div>
+        <h3 class="price">Rp {{ number_format($argo->harga,0,",","." ) }},-</h3>
+        <div class="small-text" id="dep-head">Departure:</div>
+        <div class="big-text" id="dep-time">{{ $formatedDepart }}</div>
+        <div class="small-text" id="dep-station">{{ $argo->stBrgkt }} ({{ $argo->stBID }})</div>
+        <div class="small-text" id="arr-head">Arrival:</div>
+        <div class="big-text" id="arr-time">{{ $formatedArrive }}</div>
+        <div class="small-text" id="arr-station">{{ $argo->stTiba }} ({{ $argo->stTID }})</div>
+        <div class="small-text" id="est-head">Estimate:</div>
+        <div class="big-text" id="est-time">{{ $diffHour }} hour(s) {{ $diffMin }} minute(s)</div>
+        <div class="small-text" id="est-type">Transit</div>
+
+    </form>
+ </div>
 @endforeach
 
 
@@ -204,7 +232,7 @@ use Illuminate\Support\Carbon;
  <br>
  <br>
 
- <footer class="text-center text-white" style="top: 750px; position: relative">
+ {{-- <footer class="text-center text-white" style="top: 750px; position: relative">
     <!-- Grid container -->
     <div class="container_pt-4">
         <!-- Section: Social media -->
@@ -272,7 +300,7 @@ use Illuminate\Support\Carbon;
         <a class="text-light" href="#">Travail</a>
     </div>
     <!-- Copyright -->
-</footer>
+</footer> --}}
 
 
 
@@ -286,3 +314,6 @@ use Illuminate\Support\Carbon;
 
 
   </html>
+
+  @include('layouts.foot')
+@endsection

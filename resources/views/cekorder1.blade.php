@@ -49,7 +49,7 @@
         </li> -->
         <li class="nav-item">
             <a class="nav-link" href="/about">About Us</a>
-    
+
 
         </ul>
         <li class="Login">
@@ -67,9 +67,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+
+
     <!-- contentnya -->
-    <div class="wrappers">
+    {{-- <div class="wrappers">
         <div class="choose1">
             <ul>
                 <li><a href="/cekorder" id="hari">90 Hari Terakhir</a></li>
@@ -79,19 +80,30 @@
         </div>
     </div>
 
-    <div id="month">Januari 2023</div>
+    <div id="month">Januari 2023</div> --}}
 
+
+    @php
+        $histories = DB::table('history')->where('userID', '=', Auth::user()->id )->get();
+    @endphp
+
+    @foreach ($histories as $history)
+    <div id="space"></div>
     <div class="kontenhistory">
         <div id="headcontent">
-            <div id="headcontenttext">Booking ID 10090022</div>
+            <div id="headcontenttext">Booking ID {{$history->id}}</div>
         </div>
+
+        @php
+            $argo = DB::table('argo')->where('argoID', $history->argoID)->first();
+        @endphp
 
         <div id="bodycontent">
             <div id="bodycontent1">
                  <ul>
-                    <li><i style="font-size: 18px" class="fa fa-calendar-o" aria-hidden="true" id="iconfa"></i>Kamis, 12 Januari 2023</li>
-                    <li><i style="font-size: 18px" class="fa fa-map-marker" aria-hidden="true" id="iconfa"></i> Gambir (JKT) &nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i> Tawang (SMG)</li>
-                    <li><i style="font-size: 18px" class="fa fa-train" aria-hidden="true" id="iconfa"></i>Argo Dedy</li>
+                    <li><i style="font-size: 18px" class="fa fa-calendar-o" aria-hidden="true" id="iconfa"></i>{{ $argo->tanggal }}</li>
+                    <li><i style="font-size: 18px" class="fa fa-map-marker" aria-hidden="true" id="iconfa"></i> {{ $argo->stBrgkt }} ({{ $argo->stBID }}) &nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i> {{ $argo->stTiba }} ({{ $argo->stTID }})</li>
+                    <li><i style="font-size: 18px" class="fa fa-train" aria-hidden="true" id="iconfa"></i>{{ $argo->namaArgo }}</li>
                 </ul>
             </div>
         </div>
@@ -99,39 +111,17 @@
         <div id="footcontent">
             <div id="footcontent1">
                 <ul>
-                    <li id="fc1list1">Transaksi Selesai <i class="fa fa-check-circle-o" aria-hidden="true" id="iconfa"></i></li>
-                    <li id="fc1list2">Rp. 375.000,-</li>
+                    <li id="fc1list1">Order Placed <i class="fa fa-check-circle-o" aria-hidden="true" id="iconfa"></i></li>
+                    <li id="fc1list2">Rp {{ number_format($argo->harga,0,",","." ) }},-</li>
                 </ul>
             </div>
         </div>
     </div>
 
+    @endforeach
     <div id="space"></div>
 
-    <div class="kontenhistory">
-        <div id="headcontent">
-            <div id="headcontenttext">Booking ID 10090022</div>
-        </div>
 
-        <div id="bodycontent">
-            <div id="bodycontent1">
-                <ul>
-                    <li><i style="font-size: 18px" class="fa fa-calendar-o" aria-hidden="true" id="iconfa"></i>Minggu, 15 Januari 2023</li>
-                    <li><i style="font-size: 18px" class="fa fa-map-marker" aria-hidden="true" id="iconfa"></i> Tawang (SMG) &nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i> Gambir (JKT)</li>
-                    <li><i style="font-size: 18px" class="fa fa-train" aria-hidden="true" id="iconfa"></i>Argo Putra</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="footcontent">
-            <div id="footcontent1">
-                <ul>
-                    <li id="fc1list1">Transaksi Selesai <i class="fa fa-check-circle-o" aria-hidden="true" id="iconfa"></i></li>
-                    <li id="fc1list2">Rp. 1.000.000,-</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </body>
 
 <footer class="text-center text-white" style="top: 750px; position: relative">

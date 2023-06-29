@@ -52,42 +52,78 @@
   </div>
 </nav> --}}
 
+
+@php
+    $argo = DB::table('argo')->where('argoID', $identifier)->first();
+@endphp
+
+{{-- <h2>{{$identifier}}</h2> --}}
+
+<div class="penumpang">
+    <h5>Detail Pemesanan</h5>
+    <div class="detail-penumpang">
+        <div class="data-penumpang">
+            <p>Summary</p>
+            <!-- disesuaikan dengan jumlah tiket nanti -->
+        </div>
+
+        <div class="titel">
+            <div class="big-text" id="train-name">{{ $argo->namaArgo }}</div>
+            <div class="small-text" id="train-class">{{ $argo->kelasArgo }}</div>
+            <h3 class="harga">Rp {{ number_format($argo->harga,0,",","." ) }},-</h3>
+            <div class="small-text" id="dep-head">Departure:</div>
+            {{-- <div class="big-text" id="dep-time">{{ $formatedDepart }}</div> --}}
+            <div class="small-text" id="dep-station">{{ $argo->stBrgkt }} ({{ $argo->stBID }})</div>
+            <div class="small-text" id="arr-head">Arrival:</div>
+            {{-- <div class="big-text" id="arr-time">{{ $formatedArrive }}</div> --}}
+            <div class="small-text" id="arr-station">{{ $argo->stTiba }} ({{ $argo->stTID }})</div>
+            {{-- <div class="small-text" id="est-head">Estimate:</div>
+            <div class="big-text" id="est-time">{{ $diffHour }} hour(s) {{ $diffMin }} minute(s)</div>
+            <div class="small-text" id="est-type">Transit</div> --}}
+        </div>
+    </div>
+</div>
+
+<form action="{{ route('proses-tiket') }}" method="POST">
+    @csrf
+
+
     <div class="penumpang">
         <h5>Data Penumpang</h5>
         <div class="detail-penumpang">
             <div class="data-penumpang">
-                <p>Penumpang 1</p>
+                <p>Penumpang</p>
                 <!-- disesuaikan dengan jumlah tiket nanti -->
             </div>
 
             <div class="titel">
                 <h6>Titel</h6>
-                <select class="titel-select">
+                <select class="titel-select" name="titelnama">
                     <option selected>Pilih Titel</option>
-                    <option>Tuan</option>
-                    <option>Nyonya</option>
-                    <option>Nona</option>
+                    <option value="Tuan">Tuan</option>
+                    <option value="Nyonya">Nyonya</option>
+                    <option value="Nona">Nona</option>
                 </select>
             </div>
 
             <div class="name-form">
                 <label for="formGroupExampleInput" class="name-label">Nama Lengkap</label>
-                <input type="text" class="name-control" id="formGroupExampleInput" placeholder="Masukkan Nama Lengkap Anda">
+                <input type="text" class="name-control" name="namalengkap" id="formGroupExampleInput" placeholder="Masukkan Nama Lengkap Anda">
             </div>
 
                 <div class="no-telp">
                     <label for="phone">Nomor Telepon</label>
-                    <input type="tel" id="phone" class="phone-control" placeholder="Masukkan Nomor Telepon Anda">
+                    <input type="tel" id="phone" name="nomortelp" class="phone-control" placeholder="Masukkan Nomor Telepon Anda">
                 </div>
 
                 <div class="email">
                     <label for="email">Email</label>
-                    <input type="email" id="email" class="email-control" placeholder="Masukkan Alamat Email Anda">
+                    <input type="email" id="email" name="emailpen" class="email-control" placeholder="Masukkan Alamat Email Anda">
                 </div>
 
             <div class="nik">
                 <label for="formGroupExampleInput" class="nik-label">NIK</label>
-                <input type="text" class="nik-control" id="formGroupExampleInput" placeholder="Masukkan NIK Anda">
+                <input type="text" class="nik-control" name="nikpen" id="formGroupExampleInput" placeholder="Masukkan NIK Anda">
             </div>
         </div>
 
@@ -96,7 +132,96 @@
                 <p>Pilih Kursi</p>
             </div>
 
-            <div class="gerbong">
+<div class="cont">
+    @php
+        $Aseats = DB::table('gerbong')
+        ->where('gerbong.argoID', $identifier)
+        ->where('gerbong.gerbongID', 'A')
+        ->get();
+    @endphp
+    <div class="row">
+        <div class="btnseatocc" style="background-color: black">
+            <h2>A</h2>
+        </div>
+        @foreach ($Aseats as $Aseat)
+            @if ($Aseat->occupied)
+                {{-- <form class="formseat"> --}}
+                    <div class="btnseatocc">
+                        {{$Aseat->gerbongID}}{{$Aseat->kursiNo}}
+                    </div>
+                {{-- </form> --}}
+            @else
+                {{-- <form action="" class="formseat">
+                    @csrf --}}
+                    <input type="checkbox" class="btnseat" name="bookseat" value="{{$identifier}}:{{$Aseat->gerbongID}}:{{$Aseat->kursiNo}}">
+                        {{$Aseat->gerbongID}}{{$Aseat->kursiNo}}
+                    </input>
+                {{-- </form> --}}
+            @endif
+        @endforeach
+    </div>
+
+    @php
+        $Bseats = DB::table('gerbong')
+        ->where('gerbong.argoID', $identifier)
+        ->where('gerbong.gerbongID', 'B')
+        ->get();
+    @endphp
+    <div class="row">
+        <div class="btnseatocc" style="background-color: black">
+            <h2>B</h2>
+        </div>
+        @foreach ($Bseats as $Bseat)
+            @if ($Bseat->occupied)
+                {{-- <form class="formseat"> --}}
+
+                    <div class="btnseatocc">
+                        {{$Bseat->gerbongID}}{{$Bseat->kursiNo}}
+                    </div>
+                {{-- </form> --}}
+            @else
+                {{-- <form action="" class="formseat">
+                    @csrf --}}
+                    <input type="checkbox" class="btnseat" name="bookseat" value="{{$identifier}}:{{$Bseat->gerbongID}}:{{$Bseat->kursiNo}}">
+                        {{$Bseat->gerbongID}}{{$Bseat->kursiNo}}
+                    </input>
+                {{-- </form> --}}
+            @endif
+        @endforeach
+    </div>
+
+    @php
+        $Cseats = DB::table('gerbong')
+        ->where('gerbong.argoID', $identifier)
+        ->where('gerbong.gerbongID', 'C')
+        ->get();
+    @endphp
+
+    <div class="row">
+        <div class="btnseatocc" style="background-color: black">
+            <h2>C</h2>
+        </div>
+        @foreach ($Cseats as $Cseat)
+            @if ($Cseat->occupied)
+                {{-- <form class="formseat"> --}}
+
+                    <div class="btnseatocc">
+                        {{$Cseat->gerbongID}}{{$Cseat->kursiNo}}
+                    </div>
+                {{-- </form> --}}
+            @else
+                {{-- <form action="" class="formseat">
+                    @csrf --}}
+                    <input type="checkbox" class="btnseat" name="bookseat" value="{{$identifier}}:{{$Cseat->gerbongID}}:{{$Cseat->kursiNo}}">
+                        {{$Cseat->gerbongID}}{{$Cseat->kursiNo}}
+                    </input>
+                {{-- </form> --}}
+            @endif
+        @endforeach
+    </div>
+  </div>
+
+            {{-- <div class="gerbong">
                 <h6>Pilih Gerbong</h6>
                 <select class="gerbong-select">
                     <option selected>Pilih Gerbong</option>
@@ -133,7 +258,7 @@
                   </select>
                 </div>
 
-            </div>
+            </div> --}}
         </div>
   </div>
 
@@ -143,7 +268,7 @@
             <button class="btn btn-link" id="btn-collapse" type="button" data-toggle="collapse" data-target="#collapseHarga" aria-expanded="true" aria-controls="collapseHarga">
                 <p>Harga yang Anda Bayarkan</p>
                 <div class="total">
-                <p>RP 375.000,-</p>
+                <p>Rp {{ number_format($argo->harga,0,",","." ) }},-</p>
                 <div class="icon">
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -153,8 +278,8 @@
 
         <div class="collapse" id="collapseHarga">
                 <div class="train-detail">
-                    <h5>Nama Kereta</h5>
-                    <h5>RP 375.000,-</h5>
+                    <h5>{{$argo->namaArgo}} {{$argo->stBID}}-{{$argo->stTID}}</h5>
+                    <h5>Rp {{ number_format($argo->harga,0,",","." ) }},-</h5>
                 </div>
 
                 <div class="more-price">
@@ -168,12 +293,10 @@
     </div>
 
     <div class="booking-btn">
-        <a href="/payment">
-        <button type="button" class="btn-pesan">Pesan Tiket</button>
-        </a>
+        <button type="submit" class="btn-pesan">Pesan Tiket</button>
     </div>
 
-
+</form>
 
 
 

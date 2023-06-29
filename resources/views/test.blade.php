@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +10,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>test</h1>
-
-    <form>
-    <a href="/login">
-    <button type="submit">TEST</button>
-</a>
+    <h1>Success</h1>
 </form>
 </body>
 </html>
+
+@include('layouts.foot')
+@endsection

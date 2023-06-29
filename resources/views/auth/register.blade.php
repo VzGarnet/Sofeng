@@ -38,9 +38,9 @@
                     <label for="email">{{ __('Email Address') }}</label>
                 </div>
 
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Enter your name">
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Enter your valid email">
 
-                @error('name')
+                @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -74,17 +74,17 @@
                 <label class="form-check-label" for="exampleCheck1">I agree with all the terms and conditions</label>
             </div>
 
+
             <div class="for-button">
-                <div class="for-button">
-                    <button type="submit" class="btn btn-primary" id="button1" style="color: white; text-decoration: none">
-                        {{ __('SIGN UP') }}
-                    </button>
-                </div>
-                <div id="formFooter">
-                    Already registered? <a id="underlineHover" href="{{ route('login') }}">Login here</a>
-                </div>
+                <button type="submit" class="btn btn-primary" id="button1" style="color: white; text-decoration: none">
+                    {{ __('Register') }}
+                </button>
             </div>
         </form>
+
+        <div id="formFooter">
+            Already registered? <a id="underlineHover" href="{{ route('login') }}">Login here</a>
+        </div>
     </div>
 </div>
 
