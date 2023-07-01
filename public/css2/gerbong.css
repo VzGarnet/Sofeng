@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
-h1{
-    color:white;
+.infogerbong{
+    position: relative;
     text-align: center;
+    font-size: 4vh;
     font-weight: bold;
-    /* margin: 0; */
-    padding-top: 5vh;
+    /* padding-top: 5vw; */
 }
 
-h2{
-    margin:25px;
-    font-weight: bold;
+.picgerbong{
+    padding-top: 6vh;
+    position: relative;
+    text-align: center;
 }
 
 p{
@@ -26,26 +27,14 @@ p{
 
 .row{
     margin-bottom: -95vh;
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 30vh;
+    margin-right: 30vh;
 }
 
 .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-.headerabout{
-    background-image : url("/images/aboutus.png");
-    background-repeat : no-repeat;
-    background-size : 100vw;
-    background-position : center;
-    height : 20vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: -3vh;
 }
 
 footer {

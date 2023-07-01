@@ -93,6 +93,7 @@ use Illuminate\Support\Carbon;
             <div class="departure">
                 <h5>Stasiun Awal</h5>
                 <select class="departure-select" name="stAwal">
+                  <option selected>Pilih Stasiun Keberangkatan</option>
                     <option value="JKT">JKT</option>
                     <option value="SMG">SMG</option>
                 </select>
@@ -105,6 +106,7 @@ use Illuminate\Support\Carbon;
             <div class="arrival">
                 <h5>Stasiun Tujuan</h5>
                 <select class="arrival-select" name="stAkhir">
+                  <option selected>Pilih Stasiun Tujuan</option>
                     <option value="JKT">JKT</option>
                     <option value="SMG">SMG</option>
                 </select>
@@ -164,14 +166,6 @@ use Illuminate\Support\Carbon;
     </div>
 </form>
 
-    <h3 style="margin-top: 2vh; margin-left: 5vw; ">{{ $departStation}} ({{($departCity)}}) <-->  {{$arriveStation}} ({{($arriveCity)}})</h3>
-
-  <div class="head-container">
-    <div style="font-size: 20px; font-weight: 600">Departure Train</div>
-    <div style="font-size: 12px">{{ $departTime->format('D, d F Y') }}</div>
-    <div style="font-size: 12px">{{ $departStation}} ({{($departCity)}}) ->  {{$arriveStation}} ({{($arriveCity)}})</div>
-  </div>
-
 
   {{-- <form action="{{ route('process-form') }}" method="POST" style="margin:2vw">
     @csrf
@@ -199,109 +193,65 @@ use Illuminate\Support\Carbon;
     $argos = DB::table('argo')->where('stBID', '=', $stasiunAwal)
     ->where('stTID', '=', $stasiunAkhir)
     ->where('tanggal', '=', $tanggalBrgkt)->get();
+
+    $info = DB::table('argo')->where('stBID', '=', $stasiunAwal)->first();
 @endphp
+
+<h3 style="margin-top: 2vh; margin-left: 5vw; ">{{ $info->stBrgkt}} ({{($stasiunAwal)}}) - {{$info->stTiba}} ({{($stasiunAkhir)}})</h3>
+
+  <div class="head-container">
+    <div style="font-size: 3vh; font-weight: 600">Departure Train</div>
+
+    @php
+        $dateString = Carbon::parse($tanggalBrgkt);
+    @endphp
+
+    <div style="font-size: 2vh">{{ $dateString->format('D, d F Y') }}</div>
+    <div style="font-size: 2vh">{{ $info->stBrgkt}} ({{($stasiunAwal)}}) ->  {{$info->stTiba}} ({{($stasiunAkhir)}})</div>
+  </div>
 
  @foreach ($argos as $argo)
  <div class="train-cont">
     <form action="{{ route('process-form') }}" method="POST">
         @csrf
-        <div>
-            <button type="submit" value="{{ $argo->argoID }}" class="btn-search" name="identifierArgo">Pilih</button>
+
+        <div class="train-detail">
+          <div class="big-text-argo">
+            <div class="big-text" id="train-name">{{ $argo->namaArgo }}</div>
+            <div class="small-text" id="train-class">{{ $argo->kelasArgo }}</div>
+          </div>
+          <h3 class="price">Rp {{ number_format($argo->harga,0,",","." ) }},-</h3>
         </div>
-        <div class="big-text" id="train-name">{{ $argo->namaArgo }}</div>
-        <div class="small-text" id="train-class">{{ $argo->kelasArgo }}</div>
-        <h3 class="price">Rp {{ number_format($argo->harga,0,",","." ) }},-</h3>
-        <div class="small-text" id="dep-head">Departure:</div>
-        <div class="big-text" id="dep-time">{{ $formatedDepart }}</div>
-        <div class="small-text" id="dep-station">{{ $argo->stBrgkt }} ({{ $argo->stBID }})</div>
-        <div class="small-text" id="arr-head">Arrival:</div>
-        <div class="big-text" id="arr-time">{{ $formatedArrive }}</div>
-        <div class="small-text" id="arr-station">{{ $argo->stTiba }} ({{ $argo->stTID }})</div>
-        <div class="small-text" id="est-head">Estimate:</div>
-        <div class="big-text" id="est-time">{{ $diffHour }} hour(s) {{ $diffMin }} minute(s)</div>
-        <div class="small-text" id="est-type">Transit</div>
+
+        <div class="detailed-info">
+          <div class="dept-time">
+            <div class="small-text" id="dep-head">Departure:</div>
+            <div class="big-text" id="dep-time">{{ $formatedDepart }}</div>
+            <div class="small-text" id="dep-station">{{ $argo->stBrgkt }} ({{ $argo->stBID }})</div>
+          </div>
+
+          <div class="arr-time">
+            <div class="small-text" id="arr-head">Arrival:</div>
+            <div class="big-text" id="arr-time">{{ $formatedArrive }}</div>
+            <div class="small-text" id="arr-station">{{ $argo->stTiba }} ({{ $argo->stTID }})</div>
+          </div>
+
+          <div class="est-time">
+            <div class="small-text" id="est-head">Estimate:</div>
+            <div class="big-text" id="est-time">{{ $diffHour }} hour(s) {{ $diffMin }} minute(s)</div>
+            <div class="small-text" id="est-type">Transit</div>
+          </div>
+
+          <div>
+            <button type="submit" value="{{ $argo->argoID }}" class="btn-search-select" name="identifierArgo">Pilih Tiket</button>
+          </div>
+
+
+        </div>
 
     </form>
  </div>
 @endforeach
-
-
-
- <br>
- <br>
- <br>
- <br>
-
- {{-- <footer class="text-center text-white" style="top: 750px; position: relative">
-    <!-- Grid container -->
-    <div class="container_pt-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-        <!-- Facebook -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-facebook-f"></i
-        ></a>
-
-        <!-- Twitter -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-twitter"></i
-        ></a>
-
-        <!-- Google -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-google"></i
-        ></a>
-
-        <!-- Instagram -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-instagram"></i
-        ></a>
-
-        <!-- Linkedin -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-linkedin"></i
-        ></a>
-        <!-- Github -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-github"></i
-        ></a>
-        </section>
-        <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center text-light" style="font-weight:bold">
-        © 2023 Copyright:
-        <a class="text-light" href="#">Travail</a>
-    </div>
-    <!-- Copyright -->
-</footer> --}}
-
 
 
 

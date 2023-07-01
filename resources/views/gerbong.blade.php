@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,133 +15,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('css2/promo.css')}}">
+    <link rel="stylesheet" href="{{asset('css2/gerbong.css')}}">
 
     <title>Gerbong</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="/home">
-        <img src="{{url('/images/travail1.png')}}" alt="Image"/>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Bebas</a>
-        </li> -->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Booking
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/search">Booking Ticket</a>
-            <a class="dropdown-item" href="/cekorder">Check Order</a>
-            <!-- <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a> -->
-            </div>
-        </li>
-        <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-        </li> -->
-        <li class="nav-item">
-            <a class="nav-link" href="/about">About Us</a>
-    
-
-        </ul>
-        <li class="Login">
-            <a class="login" href="/login">Login/Sign Up</a>
-        </li>
-        <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form> -->
-    </div>
-    </nav>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <div class="infopromo">Fitur ini dalam tahap pengembangan!</div>
+
+    <div class="infogerbong">Berita: Travail Menambahkan Gerbong Baru untuk Meningkatkan Layanan Perjalanan</div>
+
+    <div class="picgerbong" id="pg1">
+        <img class="pg1-img" src="{{url('/images/infogerbong.jpg')}}" alt="images"/>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <p>Travail, dengan bangga mengumumkan penambahan gerbong baru pada beberapa layanan kereta api mereka. Keputusan ini diambil sebagai bagian dari komitmen Travail untuk terus meningkatkan kualitas layanan dan memberikan pengalaman perjalanan terbaik kepada para penumpang.</p>
+            <p>Travail, sebagai solusi inovatif dalam industri transportasi di Indonesia, senantiasa berusaha menyesuaikan diri dengan kebutuhan dan permintaan pasar. Dalam beberapa minggu mendatang, beberapa layanan kereta api Travail akan ditingkatkan kapasitasnya dengan menambahkan gerbong baru yang modern dan nyaman.</p>
+            <p>Gerbong baru Travail akan dilengkapi dengan fasilitas terkini, kursi ergonomis, dan peralatan mutakhir untuk meningkatkan kenyamanan penumpang. Selain itu, setiap gerbong akan diatur dengan sistem manajemen yang canggih untuk memastikan ketepatan waktu dan efisiensi dalam perjalanan.</p>
+        </div>
+
+        <div class="column">
+            <p>Dengan penambahan gerbong ini, Travail juga berharap dapat memberikan kontribusi lebih besar bagi pertumbuhan sektor pariwisata dan ekonomi di Indonesia. Travail akan terus berinovasi dan berusaha untuk menjadi mitra setia dalam memenuhi kebutuhan transportasi masyarakat Indonesia.</p>
+            <p>Bagi para calon penumpang yang berencana melakukan perjalanan dengan kereta api, Travail mengundang untuk menikmati pengalaman perjalanan yang nyaman dan aman dengan fasilitas terbaik yang ditawarkan. Penumpang diingatkan untuk memesan tiket segera mengingat peningkatan permintaan dapat menyebabkan keterbatasan tempat duduk.</p>
+            <p>Travail berharap penambahan gerbong ini akan semakin memperkuat posisi mereka sebagai perusahaan kereta api terkemuka di Indonesia dan akan terus berkomitmen untuk memberikan layanan terbaik bagi masyarakat. Nikmati pesona Nusantara dengan Travail, layanan kereta api yang menjadi solusi cerdas untuk perjalanan Anda.</p>
+        </div>
+    </div>
 </body>
-
-<footer class="text-center text-white" style="top: 750px; position: relative">
-    <!-- Grid container -->
-    <div class="container_pt-4">
-        <!-- Section: Social media -->
-        <section class="mb-4">
-        <!-- Facebook -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-facebook-f"></i
-        ></a>
-
-        <!-- Twitter -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-twitter"></i
-        ></a>
-
-        <!-- Google -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-google"></i
-        ></a>
-
-        <!-- Instagram -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-instagram"></i
-        ></a>
-
-        <!-- Linkedin -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-linkedin"></i
-        ></a>
-        <!-- Github -->
-        <a
-            class="btn btn-link btn-floating btn-lg text-light m-1"
-            href="#!"
-            role="button"
-            data-mdb-ripple-color="light"
-            ><i class="fab fa-github"></i
-        ></a>
-        </section>
-        <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center text-light" style="font-weight:bold">
-        © 2023 Copyright:
-        <a class="text-light" href="#">Travail</a>
-    </div>
-    <!-- Copyright -->
-</footer>
-
 </html>
+
+@include('layouts.foot')
+@endsection

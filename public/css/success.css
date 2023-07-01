@@ -1,0 +1,71 @@
+#big-text, #small-text, .btn-container{
+    margin-left: 5vw;
+  }
+
+#big-text{
+    font-size: 6vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#small-text{
+    font-size: 2vw;
+    margin-top: 2vh;
+}
+
+.btn-container{
+    background: linear-gradient(84.83deg, #B0002C 7.42%, #FF0040 92.13%);
+    width: 16vw;
+    height: 8vh;
+
+    border-radius: 37px;
+
+    position: relative;
+    margin-top: 6vh;
+    display: block;
+}
+
+.texts-btn{
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 700;
+
+    position: relative;
+    top: 2vh;
+}
+
+.btn-container:link{text-decoration: none;}
+.btn-container:visited{text-decoration: none;}
+.btn-container:hover{box-shadow: 2px 2px 5px white;}
+.btn-container:active{text-decoration: none;}
+
+.texts-btn:link{text-decoration: none;}
+.texts-btn:visited{text-decoration: none;}
+.texts-btn:hover{text-shadow: 1px 1px 1px white; text-decoration: none;}
+.texts-btn:active{text-decoration: none;}
+
+.arrow{
+    margin-left: 0.3vw;
+    height: 1.8vh;
+    width: 1vw;
+  }
+
+#image-lower{
+    background-repeat: no-repeat;
+
+    position: relative;
+    margin-top: 5vh;
+    margin-left: 27.5vw;
+    margin-bottom: -102vh;
+
+    width: auto;
+    height: auto;
+}
+
+.buttonsuccess{
+    display: flex;
+}
+
+#btn2{
+    margin-left: 2vw;
+}

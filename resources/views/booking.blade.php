@@ -108,22 +108,22 @@
 
             <div class="name-form">
                 <label for="formGroupExampleInput" class="name-label">Nama Lengkap</label>
-                <input type="text" class="name-control" name="namalengkap" id="formGroupExampleInput" placeholder="Masukkan Nama Lengkap Anda">
+                <input type="text" class="name-control" name="namalengkap" id="formGroupExampleInput" placeholder="Masukkan Nama Lengkap Anda" required>
             </div>
 
                 <div class="no-telp">
                     <label for="phone">Nomor Telepon</label>
-                    <input type="tel" id="phone" name="nomortelp" class="phone-control" placeholder="Masukkan Nomor Telepon Anda">
+                    <input type="tel" id="phone" name="nomortelp" class="phone-control" placeholder="Masukkan Nomor Telepon Anda" required>
                 </div>
 
                 <div class="email">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="emailpen" class="email-control" placeholder="Masukkan Alamat Email Anda">
+                    <input type="email" id="email" name="emailpen" class="email-control" placeholder="Masukkan Alamat Email Anda" required>
                 </div>
 
             <div class="nik">
                 <label for="formGroupExampleInput" class="nik-label">NIK</label>
-                <input type="text" class="nik-control" name="nikpen" id="formGroupExampleInput" placeholder="Masukkan NIK Anda">
+                <input type="text" class="nik-control" name="nikpen" id="formGroupExampleInput" placeholder="Masukkan NIK Anda" required>
             </div>
         </div>
 
@@ -293,7 +293,7 @@
     </div>
 
     <div class="booking-btn">
-        <button type="submit" class="btn-pesan">Pesan Tiket</button>
+        <button type="submit" value="{{ $identifier }}" class="btn-pesan" name="identifierArgo">Pesan Tiket</button>
     </div>
 
 </form>

@@ -95,6 +95,7 @@ use Illuminate\Support\Carbon;
             <div class="departure">
                 <h5>Stasiun Awal</h5>
                 <select class="departure-select" name="stAwal">
+                    <option selected>Pilih Stasiun Keberangkatan</option>
                     <option value="JKT">JKT</option>
                     <option>SMG</option>
                 </select>
@@ -107,6 +108,7 @@ use Illuminate\Support\Carbon;
             <div class="arrival">
                 <h5>Stasiun Tujuan</h5>
                 <select class="arrival-select" name="stAkhir">
+                    <option selected>Pilih Stasiun Tujuan</option>
                     <option>JKT</option>
                     <option value="SMG">SMG</option>
                 </select>

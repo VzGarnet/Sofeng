@@ -105,12 +105,12 @@ body{
 }
 
 .big-text{
-    font-size: 24px;
+    font-size: 2vw;
     font-weight: 600;
 }
 
 .small-text{
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: 500;
 
     color: #646464;
@@ -119,8 +119,6 @@ body{
 .harga{
     position: absolute;
     margin-left: 70vw;
-    margin-top: -6vh;
-
     background: linear-gradient(90deg, #800020 0%, #FF0040 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -128,7 +126,7 @@ body{
     text-fill-color: transparent;
 
     font-weight: 700;
-    font-size: 36px;
+    font-size: 2vw;
 }
 
 .data-penumpang{

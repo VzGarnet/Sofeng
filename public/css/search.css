@@ -4,25 +4,22 @@
     width: 70%;
     margin-left: 15vw;
     margin-top: 5vh;
-
+    /* margin-bottom: -65.5vh; */
 }
 
 
 .search-ticket{
-    /* border: solid black; */
     display: flex;
     margin-left: 2vw;
 }
 
 .search .search-ticket i{
-    /* border: solid black; */
     align-items: center;
     margin-left: 10px;
     margin-top: 3px;
 }
 
 .destination{
-    /* border: solid black; */
     display: flex;
     margin-left: 3vw;
 
@@ -31,11 +28,10 @@
 .departure-select{
     width: 30vw;
     height: 5vh;
-    /* border: solid black; */
 }
 
 .vice-versa{
-    margin-top: 5vh;
+    margin-top: 4vh;
     margin-left: 1vw;
     margin-right: 1vw;
 }
@@ -50,22 +46,20 @@
 .arrival-select{
     width: 30vw;
     height: 5vh;
-    /* border: solid black; */
 }
 
 .detail{
     display: flex;
-    margin-left: 1vw;
+    margin-left: 3vw;
     margin-bottom: 2vh;
-    justify-content: space-around;
+    justify-content: space-between;
+
 }
 
 .date-picker{
     display: flex;
-    width: 10vw;
+    width: 15vw;
 }
-
-
 
 .arrival-date{
     margin-left: 3%;
@@ -103,7 +97,7 @@
 #btn-search{
     border-radius: 40px;
     margin-top: 2vh;
-    margin-left: 1vw;
+    margin-right: 3vw;
     border: none;
     cursor: pointer;
     width: 12vw;
@@ -121,82 +115,92 @@
     color: aliceblue;
     background: radial-gradient(98.41% 1275.49% at 0.64% 96.15%, #800020 0%, #FF0040 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     border-radius: 12px;
-
     width: 95%;
-
     margin-left: 2vw;
-    margin-top: 3vh;
-
-    padding: 10px;
+    margin-top: 1vh;
     padding-left: 5vw;
-
     height: 12vh;
 }
 
 .train-cont{
     border: 2px solid black;
     border-radius: 10px;
-
-    height: 32vh;
     width: 95%;
-
     margin-left: 2vw;
     margin-top: 3vh;
-
     padding: 20px;
 }
 
 .big-text{
-    font-size: 24px;
+    font-size: 3vw;
     font-weight: 600;
+
 }
 
 .small-text{
-    font-size: 16px;
+    font-size: 1vw;
     font-weight: 500;
-
     color: #646464;
 }
 
 #train-name{
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 #train-name, #train-class{
-    margin-left: 4vw;
+    margin-left: 2vw;
 }
 
-#dep-head, #dep-time, #dep-station{
-    position: relative;
-    top: 5.5vh;
-    left: 1vw;
+
+.detailed-info{
+    display: flex;
+    justify-content: space-between;
 }
 
-#arr-head, #arr-time, #arr-station{
-    position: relative;
-    top: -5.5vh;
-    left: 16vw;
+.dept-time, .arr-time, .est-time{
+    margin-left: 2vw;
+    margin-top: 1vh;
 }
 
-#est-head, #est-time, #est-type{
-    position: relative;
-    top: -17vh;
-    left: 31vw;
+#dep-head, #dep-station, #arr-head, #arr-station, #est-head, #est-type{
+    font-size: 1vw;
 }
+
+#dep-time, #arr-time, #est-time{
+    font-size: 2vw;
+}
+
+
+.btn-search-select{
+    border-radius: 40px;
+    margin-top: 2vh;
+    border: none;
+    cursor: pointer;
+    width: 12vw;
+    height: 8vh;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5vw;
+    background: rgb(128,0,32);
+    background: linear-gradient(90deg, rgba(128,0,32,1) 0%, rgba(255,0,64,1) 100%);
+
+
+}
+
+.train-detail{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .price{
-    position: absolute;
-    margin-left: 70vw;
-    margin-top: -6vh;
-
     background: linear-gradient(90deg, #800020 0%, #FF0040 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-
     font-weight: 700;
-    font-size: 36px;
+    font-size: 2vw;
 }
 
 footer {
@@ -208,3 +212,5 @@ footer .btn-link {
     color: #fff;
     text-decoration: none;
 }
+
+

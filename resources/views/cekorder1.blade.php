@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,7 @@
     <title>Cek Order</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="/home">
         <img src="{{url('/images/travail1.png')}}" alt="Image"/>
     </a>
@@ -60,7 +64,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
     </div>
-    </nav>
+    </nav> --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -98,12 +102,15 @@
             $argo = DB::table('argo')->where('argoID', $history->argoID)->first();
         @endphp
 
+
+
         <div id="bodycontent">
             <div id="bodycontent1">
                  <ul>
                     <li><i style="font-size: 18px" class="fa fa-calendar-o" aria-hidden="true" id="iconfa"></i>{{ $argo->tanggal }}</li>
                     <li><i style="font-size: 18px" class="fa fa-map-marker" aria-hidden="true" id="iconfa"></i> {{ $argo->stBrgkt }} ({{ $argo->stBID }}) &nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i> {{ $argo->stTiba }} ({{ $argo->stTID }})</li>
                     <li><i style="font-size: 18px" class="fa fa-train" aria-hidden="true" id="iconfa"></i>{{ $argo->namaArgo }}</li>
+                    <li><i style="font-size: 18px" class="fa fa-train" aria-hidden="true" id="iconfa"></i>{{$history->gerbongID}}{{ $history->kursiNo }}</li>
                 </ul>
             </div>
         </div>
@@ -123,7 +130,7 @@
 
 
 </body>
-
+{{--
 <footer class="text-center text-white" style="top: 750px; position: relative">
     <!-- Grid container -->
     <div class="container_pt-4">
@@ -192,6 +199,8 @@
         <a class="text-light" href="#">Travail</a>
     </div>
     <!-- Copyright -->
-</footer>
+</footer> --}}
 
 </html>
+@include('layouts.foot')
+@endsection

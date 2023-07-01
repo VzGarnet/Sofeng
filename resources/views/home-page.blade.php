@@ -85,8 +85,8 @@
         <a href="#desc3" class="promo-text">Gerbong baru KAI</a>
       </div>
       <div class="promo" id="promo3">
-        <img class="promo-img" src="{{url('/images/train3.jpg')}}" alt="images"/>
-        <a href="#desc1" class="promo-text">Ayo naik kereta!</a>
+        <img class="promo-img" src="{{url('/images/train3.png')}}" alt="images"/>
+        <a href="#desc1" class="promo-text">Pesan Tiket Sekarang!</a>
       </div>
     </div>
 
@@ -97,7 +97,15 @@
     <div class="desc-text-left">Pesan Tiket Sekarang!</div>
     <div class="desc-text-fill" id="text-left">Ingin berlibur naik kereta? Ayo pesan tiket sekarang agar tidak kehabisan.<br>
     Dengan Travail, pemesanan tiket menjadi jauh lebih mudah.</div>
-    <a href="/booking" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
+
+    @if(auth()->check())
+    <!-- User is logged in -->
+        <a href="/search" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
+    @else
+        <a href="/login" class="btn-container" id="promo-btn1"><div class="promo-btn">Pesan</div></a>
+    @endif
+
+
     </section>
   <section class="desc-box" id="desc2">
     <img class="desc-img" src="{{url('/images/train1.jpg')}}" alt="images"/>
